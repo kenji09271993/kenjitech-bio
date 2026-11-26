@@ -176,6 +176,13 @@ section{padding:120px 0;border-bottom:1px solid var(--line)}
 .snote a{text-decoration:underline}
 .legal{border-top:1px solid var(--ink);margin-top:24px}
 .legal div{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.support{border:1px solid var(--ink);padding:48px;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.support .msg{font-size:clamp(18px,2vw,22px);font-weight:500;line-height:1.9}
+.support .btn{display:inline-block;padding:16px 40px}
+.support .small{font-size:13px;color:var(--sub);margin-top:14px}
+.support .small a{text-decoration:underline}
+.legal{border-top:1px solid var(--ink);margin-top:24px}
+.legal div{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
 .ov{border-top:1px solid var(--ink)}
 .ov div{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
 .src{margin-top:40px;font-size:12px;color:var(--sub);line-height:1.7}
@@ -210,6 +217,8 @@ br.sp{display:none}
   .how{grid-template-columns:1fr 1fr}
   .eg{grid-template-columns:1fr}.eg a{min-height:0}
   .news li{grid-template-columns:1fr;gap:2px}
+  .support{grid-template-columns:1fr;gap:24px;padding:28px 20px}
+  .legal div{grid-template-columns:1fr;gap:2px}
   .session{grid-template-columns:1fr;gap:24px}
   .sdl div,.legal div{grid-template-columns:1fr;gap:2px}
   .legend{display:none}
@@ -450,6 +459,22 @@ br.sp{display:none}
     </div>
   </section>
 
+  <section id="support">
+    <div class="wrap">
+      <div class="support reveal">
+        <div>
+          <p class="mono" style="margin-bottom:16px">Support</p>
+          <p class="msg">To you, reading this site:<br>Kenjitech Bio keeps working to go beyond human limits. If anything here resonates with you, please support us. Any amount is welcome.</p>
+        </div>
+        <div>
+          <a class="btn" href="https://buy.stripe.com/3cI9AV7JOc7s9CaeXM0Fi05" target="_blank" rel="noopener">Support us</a>
+          <p class="small">Your support goes to our research and business. Names are recorded in our story only if you wish.</p>
+          <p class="small">For support above ¥1,000,000, please <a href="mailto:abe9161@gmail.com?subject=Supporting%20Kenjitech%20Bio">contact us directly</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="wrap ct">
       <div class="reveal">
@@ -529,6 +554,23 @@ br.sp{display:none}
     <h2>06 Corrections</h2><p>If we find an error, we correct it and keep a record of the date and content of the correction.</p>
   </div>
 </article>
+<article data-view="tokushoho" class="doc" hidden>
+  <div class="wrap">
+    <p class="mono"><a href="#top">← Back to top</a></p>
+    <h1>Legal Notice (Specified Commercial Transactions Act, Japan)</h1>
+    <dl class="legal">
+      <div><dt>Operator</dt><dd>Kenjitech Bio (Kenji Nagae)</dd></div>
+      <div><dt>Responsible person</dt><dd>Kenji Nagae</dd></div>
+      <div><dt>Address / Phone</dt><dd>Disclosed without delay upon request</dd></div>
+      <div><dt>Email</dt><dd>abe9161@gmail.com</dd></div>
+      <div><dt>Amount</dt><dd>Support: amount chosen by you (¥50–¥1,000,000)</dd></div>
+      <div><dt>Payment</dt><dd>Card and others (Stripe), at the time of payment</dd></div>
+      <div><dt>Nature</dt><dd>Support is not payment for goods or services. Listing your name is a thank-you for those who wish. It is not an investment and is not tax-deductible.</dd></div>
+      <div><dt>Refunds</dt><dd>Support payments are non-refundable. If you made a mistake, please contact us by email.</dd></div>
+    </dl>
+  </div>
+</article>
+
 </main>
 
 <footer>
@@ -537,7 +579,7 @@ br.sp{display:none}
       <a href="#top" class="logo"><b>Kenjitech</b><span> Bio</span></a>
       <p>© 2026 Kenjitech Bio. This site includes concepts at an early stage. It describes the direction of our business and is not a solicitation of investment or a guarantee of scientific efficacy.</p>
     </div>
-    <nav aria-label="Footer"><a href="#privacy">Privacy Policy</a><a href="#expression-policy">Expression Policy</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Footer"><a href="#privacy">Privacy Policy</a><a href="#tokushoho">Legal Notice</a><a href="#expression-policy">Expression Policy</a><a href="#contact">Contact</a></nav>
   </div>
 </footer>
 
@@ -554,7 +596,7 @@ mb.onclick=()=>setMenu(!menu.classList.contains('open'));
 menu.querySelectorAll('a').forEach(a=>a.onclick=()=>setMenu(false));
 
 const views=document.querySelectorAll('[data-view]');
-function route(){const h=location.hash.slice(1);const doc=['privacy','expression-policy'].includes(h)?h:'home';
+function route(){const h=location.hash.slice(1);const doc=['privacy','expression-policy','tokushoho'].includes(h)?h:'home';
   views.forEach(v=>v.hidden=v.dataset.view!==doc);if(doc!=='home')scrollTo(0,0);}
 addEventListener('hashchange',route);route();
 
