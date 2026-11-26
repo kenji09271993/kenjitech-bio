@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenjitech Bio — Going beyond human limits, through science.</title>
+<meta name="description" content="Kenjitech Bio is a biotechnology company turning life-science technology into infrastructure anyone can use.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kenjitech Bio">
+<meta property="og:title" content="Kenjitech Bio — Going beyond human limits, through science.">
+<meta property="og:description" content="Turning life-science technology into infrastructure anyone can use.">
+<meta property="og:url" content="https://kenji09271993.github.io/kenjitech-bio/en/">
+<meta property="og:image" content="https://kenji09271993.github.io/kenjitech-bio/og.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23fff%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-family=%22Inter,Arial%22 font-weight=%22700%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22%230a0a0a%22%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--sub:#5c5c5c;--line:#e6e6e6;--bg:#fff;--accent:#0057ff;--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Inter,"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sub)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:8px 12px;border:1px solid var(--ink)}
+.logo{font-size:20px;letter-spacing:-.02em}
+.logo b{font-weight:700}.logo span{font-weight:300}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav.main{margin-left:auto}
+.hr{display:flex;align-items:center}
+.lang{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:4px 10px;margin-left:20px;color:var(--sub)}
+.lang:hover{color:var(--ink);border-color:var(--ink)}
+nav.main a{margin-left:26px;font-size:14px;color:var(--sub);transition:color .2s}
+nav.main a:hover{color:var(--ink)}
+nav.main a.cta{color:#fff;background:var(--ink);padding:8px 16px;border-radius:999px}
+.mb{display:none;background:none;border:0;width:40px;height:40px;position:relative;cursor:pointer}
+.mb span{position:absolute;left:10px;right:10px;height:1.5px;background:var(--ink);transition:transform .3s}
+.mb span:first-child{top:15px}.mb span:last-child{top:23px}
+.mb[aria-expanded=true] span:first-child{transform:translateY(4px) rotate(45deg)}
+.mb[aria-expanded=true] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.menu{position:fixed;inset:64px 0 0;background:var(--ink);color:#fff;z-index:19;padding:32px 24px;display:none}
+.menu.open{display:block}
+.menu a{display:block;font-size:26px;font-weight:700;padding:10px 0;border-bottom:1px solid #222}
+.menu small{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#888;margin-right:14px;font-weight:400}
+.hero{padding:140px 0 110px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+#field{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:10px;vertical-align:middle;animation:pulse 2s infinite}
+.hero h1{font-size:clamp(36px,6.4vw,76px);font-weight:700;line-height:1.2;letter-spacing:-.03em;margin:24px 0 32px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--sub);max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:16px 48px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);max-width:760px}
+.meta dd{font-size:14px;margin-top:4px}
+section{padding:120px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:240px 1fr;gap:48px;margin-bottom:64px}
+.sec-head h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.35}
+.mission-quote{font-size:clamp(22px,2.8vw,32px);font-weight:500;line-height:1.6;letter-spacing:-.01em;max-width:860px}
+.hl{color:var(--accent)}
+.vision-body{margin-top:96px;padding-top:48px;border-top:1px solid var(--ink)}
+.vision-text{font-size:clamp(18px,2vw,23px);font-weight:500;line-height:2;margin:20px 0 40px}
+.paradox{font-size:clamp(22px,2.8vw,30px);font-weight:700;line-height:1.6;letter-spacing:-.01em;padding-left:20px;border-left:3px solid var(--accent)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:72px}
+.process div{background:var(--bg);padding:28px 24px}
+.process h3{font-size:18px;font-weight:700;margin:10px 0 6px}
+.process p:last-child{color:var(--sub);font-size:14px}
+.defs{margin-top:48px;display:grid;gap:16px}
+.defs div{display:grid;grid-template-columns:160px 1fr;gap:24px;font-size:14px}
+.defs dt{font-weight:700}.defs dd{color:var(--sub)}
+.qs{list-style:none;border-top:1px solid var(--ink)}
+.qs li{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:32px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.qs .qn{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--accent)}
+.qs p{font-size:clamp(19px,2.2vw,26px);font-weight:500;line-height:1.6}
+.answer{margin-top:56px;padding:40px;background:var(--ink);color:#fff}
+.answer .mono{color:#8a8a8a}
+.answer .a-text{font-size:clamp(22px,2.8vw,32px);font-weight:700;line-height:1.6;letter-spacing:-.01em;margin-top:12px}
+.legend{display:flex;margin-bottom:24px;border:1px solid var(--line)}
+.legend span{flex:1;padding:10px 12px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--sub);border-right:1px solid var(--line)}
+.legend span:last-child{border-right:0}
+.prog{border-top:1px solid var(--line);padding:40px 0}
+.prog:last-of-type{border-bottom:1px solid var(--line)}
+.prog-top{display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:start}
+.prog .no{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--sub);padding-top:6px}
+.prog h3{font-size:24px;font-weight:700;letter-spacing:-.01em}
+.prog .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--sub);letter-spacing:.08em;margin:2px 0 14px}
+.prog p.desc{color:var(--sub);font-size:15px;max-width:640px}
+.status{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--sub);white-space:nowrap}
+.status.active{border-color:var(--accent);color:var(--accent)}
+.status.active::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:24px 0 0 88px;max-width:640px}
+.track i{height:6px;background:var(--line);border-radius:3px}
+.track i.on{background:var(--ink)}.track i.now{background:var(--accent)}
+.track-l{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:8px 0 0 88px;max-width:640px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.06em;color:var(--sub)}
+.track-l b{color:var(--accent);font-weight:500}
+.prog-note{margin:12px 0 0 88px;font-size:13px;color:var(--sub)}
+.goal20{margin:32px 0 0 88px;max-width:640px;padding:24px;border:1px solid var(--line)}
+.goal20 .big{font-size:56px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.goal20 .big span{color:var(--accent)}
+.goal20 p{font-size:14px;color:var(--sub);margin-top:8px}
+.goal20 .t{color:var(--ink);font-weight:500;font-size:15px}
+.bar{position:relative;height:10px;background:var(--line);margin:16px 0 6px}
+.bar b{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);transition:width 1.6s ease}
+.bar.in b{width:20%}
+.goal20 sup a{color:var(--accent)}
+.how{margin:32px 0 0 88px;max-width:760px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how div{background:var(--bg);padding:20px 18px}
+.how h4{font-size:15px;margin:6px 0 4px}
+.how p{font-size:13px;color:var(--sub)}
+.how-note{margin:12px 0 0 88px;font-size:13px;color:var(--sub);max-width:760px}
+.commit{margin-top:48px;padding:24px;background:#f7f7f7;font-size:15px}
+.commit b{display:block;margin-bottom:4px}
+.road{position:relative;padding-left:32px}
+.road::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.step{position:relative;padding:0 0 48px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-32px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--ink)}
+.step.now::before{background:var(--accent);border-color:var(--accent)}
+.step h3{font-size:20px;font-weight:700;margin:6px 0}
+.step p{color:var(--sub);font-size:15px;max-width:640px}
+.dark{background:var(--ink);color:#fff;border-bottom:0}
+.dark .mono{color:#8a8a8a}
+.founder{display:grid;grid-template-columns:240px 1fr;gap:48px}
+.founder h2{font-size:clamp(34px,5vw,60px);font-weight:700;letter-spacing:-.03em;line-height:1.25;margin-bottom:40px}
+.founder .name{font-size:24px;font-weight:700}
+.founder p.body{color:#cfcfcf;max-width:680px;margin-bottom:20px;font-size:16px;line-height:2}
+.founder p.body strong{color:#fff;font-weight:500}
+.eg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.eg a{background:var(--bg);padding:28px 24px;display:flex;flex-direction:column;gap:6px;min-height:190px;transition:background .2s}
+.eg a:hover{background:#f7f7f7}
+.eg a.pri{background:var(--ink);color:#fff}
+.eg a.pri .mono{color:#8a8a8a}.eg a.pri .d{color:#cfcfcf}
+.eg .t{font-size:20px;font-weight:700}
+.eg .d{font-size:14px;color:var(--sub);flex:1}
+.eg .ar{font-size:18px}
+.news{list-style:none;border-top:1px solid var(--ink)}
+.news li{display:grid;grid-template-columns:140px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line);font-size:15px}
+.ct{display:grid;grid-template-columns:1fr 1.3fr;gap:64px}
+.ct h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.35;margin:16px 0}
+.ct .txt{color:var(--sub);font-size:15px}
+.ct .mail{display:inline-block;margin-top:24px;border-bottom:1px solid var(--ink);font-weight:500}
+.seg{border:0;display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 20px}
+.seg legend{margin-bottom:10px}
+.seg label{cursor:pointer}
+.seg input{position:absolute;opacity:0}
+.seg span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+.seg input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.seg input:focus-visible+span{outline:2px solid var(--accent)}
+.fd{margin-bottom:18px}
+.fd label{display:block;margin-bottom:6px}
+.fd input,.fd textarea{width:100%;border:0;border-bottom:1px solid #bbb;padding:10px 0;background:transparent;outline:none;font-size:16px}
+.fd input:focus,.fd textarea:focus{border-color:var(--accent)}
+.er{color:#c4002b;font-size:13px;min-height:1em}
+.ck{display:flex;gap:10px;align-items:center;font-size:14px;cursor:pointer}
+.ck a{text-decoration:underline}
+.btn{background:var(--ink);color:#fff;border:0;padding:14px 32px;border-radius:999px;cursor:pointer;font-weight:600}
+.btn:hover{background:var(--accent)}
+.f-note{font-size:13px;color:var(--sub);margin-bottom:16px}
+.ov{border-top:1px solid var(--ink)}
+.ov div{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.src{margin-top:40px;font-size:12px;color:var(--sub);line-height:1.7}
+.src a{text-decoration:underline}
+.doc{padding:96px 0}
+.doc h1{font-size:32px;margin:16px 0 8px}
+.doc .draft{background:#f7f7f7;padding:12px 16px;margin:16px 0 32px;font-size:13px;color:var(--sub)}
+.doc h2{font-size:18px;margin:32px 0 8px}
+.doc p{color:#333;font-size:15px;max-width:720px}
+footer{padding:48px 0 64px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+footer nav a{margin-right:20px;font-size:13px;color:var(--sub)}
+footer p{font-size:12px;color:var(--sub);max-width:560px;margin-top:12px}
+br.sp{display:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.nojs .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.status.active::before,.dot{animation:none}.bar b{transition:none}}
+@media (max-width:860px){
+  nav.main{display:none}.mb{display:block}
+  .hero{padding:96px 0 80px}
+  section{padding:80px 0}
+  .sec-head,.founder,.ct{grid-template-columns:1fr;gap:16px}
+  .sec-head{margin-bottom:40px}
+  .process{grid-template-columns:1fr 1fr}.process div{padding:20px 16px}
+  .defs div,.ov div{grid-template-columns:1fr;gap:4px}
+  br.pc{display:none}br.sp{display:inline}
+  .qs li{grid-template-columns:1fr;gap:4px}
+  .prog-top{grid-template-columns:1fr;gap:8px}
+  .prog .status{justify-self:start}
+  .track,.track-l,.prog-note,.goal20,.how,.how-note{margin-left:0}
+  .how{grid-template-columns:1fr 1fr}
+  .eg{grid-template-columns:1fr}.eg a{min-height:0}
+  .news li{grid-template-columns:1fr;gap:2px}
+  .legend{display:none}
+  .vision-text br,.mission-quote br{display:none}
+  .answer{padding:28px 20px}
+}
+</style>
+</head>
+<body class="nojs">
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Kenjitech Bio home"><b>Kenjitech</b><span> Bio</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#vision">Vision</a>
+      <a href="#programs">Programs</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#founder">Founder</a>
+      <a href="#news">News</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+    <div class="hr"><a class="lang" href="../">JA</a><button class="mb" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button></div>
+  </div>
+</header>
+<div class="menu" id="menu">
+  <a href="#vision"><small>01</small>Vision</a>
+  <a href="#questions"><small>02</small>Questions</a>
+  <a href="#programs"><small>03</small>Programs</a>
+  <a href="#roadmap"><small>04</small>Roadmap</a>
+  <a href="#founder"><small>05</small>Founder</a>
+  <a href="#engage"><small>06</small>Engage</a>
+  <a href="#news"><small>07</small>News</a>
+  <a href="#contact"><small>08</small>Contact</a>
+</div>
+
+<main id="main">
+<div data-view="home">
+
+  <div class="hero" id="top">
+    <canvas id="field" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <p class="mono"><i class="dot"></i>Kenjitech Bio — Founding 2026</p>
+      <h1>Going beyond<br><em>human limits</em>,<br>through science.</h1>
+      <p class="lead">Turning life-science technology into infrastructure anyone can use. Bringing cutting-edge science out of the lab and right beside every one of us.</p>
+      <dl class="meta">
+        <div><dt class="mono">Domain</dt><dd>Sports science · Medicine · Neuroscience</dd></div>
+        <div><dt class="mono">Program 01</dt><dd>Medical commercialization — Active in Japan</dd></div>
+        <div><dt class="mono">Since</dt><dd>2026</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section id="vision">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">01 / Vision</p>
+        <h2>Stay deeply close to people.</h2>
+      </div>
+      <p class="mission-quote reveal">No matter how advanced a technology is,<br>unless it lives right beside people,<br>it cannot be called <span class="hl">innovation</span>.</p>
+      <div class="vision-body reveal">
+        <p class="mono">Kenjitech Vision</p>
+        <p class="vision-text">A community held to a number-one standard<br>brings the barrier of every process in this company —<br>research, development, manufacturing, distribution and use,<br class="pc"> working together, investing, and even meeting us —<br>down to the level of everyday life.<br>That maximizes every chance to stay deeply close to people,<br>and creates a future in which we become your <span class="hl">“Super Luck.”</span></p>
+        <p class="paradox">Inside, a number-one standard.<br>Outside, an extremely low barrier, brought down to everyday life.</p>
+      </div>
+      <div class="process reveal">
+        <div><p class="mono">01</p><h3>Research</h3><p>Researchers and students can join with ease.</p></div>
+        <div><p class="mono">02</p><h3>Development</h3><p>The voices of athletes and the field become products.</p></div>
+        <div><p class="mono">03</p><h3>Manufacturing</h3><p>High quality at a sensible cost.</p></div>
+        <div><p class="mono">04</p><h3>Distribution</h3><p>Great medical technology, delivered to where care happens.</p></div>
+        <div><p class="mono">05</p><h3>Use</h3><p>Science-backed value, in everyday life.</p></div>
+        <div><p class="mono">06</p><h3>Work</h3><p>Belong to no single place, and be at home everywhere.</p></div>
+        <div><p class="mono">07</p><h3>Invest &amp; Partner</h3><p>Progress and results, shown openly.</p></div>
+        <div><p class="mono">08</p><h3>Encounter</h3><p>Anyone can reach out, casually.</p></div>
+      </div>
+      <dl class="defs reveal">
+        <div><dt>Community</dt><dd>Employees, researchers, athletes, customers, investors and partners — everyone involved with Kenjitech Bio.</dd></div>
+        <div><dt>Super Luck</dt><dd>Being the one people describe as “meeting you was the greatest luck of my life.”</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">02 / Questions</p>
+        <h2>We begin with<br>three questions.</h2>
+      </div>
+      <ol class="qs">
+        <li class="reveal"><span class="qn">Q1</span><p>How far can humans command their own bodies and abilities as they intend?</p></li>
+        <li class="reveal"><span class="qn">Q2</span><p>How far can we push those limits through science?</p></li>
+        <li class="reveal"><span class="qn">Q3</span><p>How can we bring that science into everyday life?</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">03 / Programs</p>
+        <h2>Four programs,<br>and where they stand.</h2>
+      </div>
+      <div class="legend reveal" aria-hidden="true"><span>01 Concept</span><span>02 Research</span><span>03 Development</span><span>04 Active</span></div>
+
+      <article class="prog reveal" id="commercialization">
+        <div class="prog-top">
+          <div class="no">01</div>
+          <div>
+            <h3>Medical Commercialization</h3>
+            <p class="en">Inside Sales BPO — Japan</p>
+            <p class="desc">Great medical technologies often never reach the clinics that need them. We connect healthtech companies with clinics and hospitals across Japan and design the path to adoption as a system — recording every voice from the field to build a deep understanding of medicine’s real problems.</p>
+            <p class="desc" style="margin-top:10px">Our model is an inside-sales BPO specialized in healthcare: from target design to outreach and booking meetings, end to end. We currently serve the Japanese market.</p>
+          </div>
+          <span class="status active">Active</span>
+        </div>
+        <div class="track" role="img" aria-label="Current stage: 04 Active"><i class="on"></i><i class="on"></i><i class="on"></i><i class="now"></i></div>
+        <div class="track-l"><span>Concept</span><span>Research</span><span>Development</span><b>Active</b></div>
+      </article>
+
+      <article class="prog reveal">
+        <div class="prog-top">
+          <div class="no">02</div>
+          <div>
+            <h3>99.9 (Three Nines)</h3>
+            <p class="en">Performance Nutrition</p>
+            <p class="desc">Redesigning energy during exercise through science. Built around high-purity fructose, we are developing drinks and apparel for athletes — and only what has been verified with research institutions becomes a product.</p>
+          </div>
+          <span class="status">Research</span>
+        </div>
+        <div class="track" role="img" aria-label="Current stage: 02 Research (in preparation)"><i class="on"></i><i class="now"></i><i></i><i></i></div>
+        <div class="track-l"><span>Concept</span><b>Research</b><span>Development</span><span>Active</span></div>
+        <p class="prog-note">Joint research with a research institution is in preparation (planned for 2027). Details will be published once intellectual property is protected.</p>
+        <div class="goal20">
+          <p class="mono">Long-term goal</p>
+          <p class="big">20<span>%</span></p>
+          <p class="t">Replace 20% of the global sugar market with fructose products.</p>
+          <div class="bar" role="img" aria-label="20% of global sugar consumption"><b></b></div>
+          <p>This is a long-term goal, not a current result or forecast. Global sugar consumption is about 188.79 million tonnes per year (2025/26 forecast, raw value)<sup><a href="#fn1">[1]</a></sup>. 20% equals roughly 37.76 million tonnes (simple volume-based calculation).</p>
+        </div>
+      </article>
+
+      <article class="prog reveal">
+        <div class="prog-top">
+          <div class="no">03</div>
+          <div>
+            <h3>Neural Language Interface</h3>
+            <p class="en">Neuroscience</p>
+            <p class="desc">Crossing language barriers from the brain. A research concept to bring advances in decoding speech from neural signals into everyday communication — toward a future where anyone, with or without a medical condition, can speak a foreign language.</p>
+          </div>
+          <span class="status">Concept</span>
+        </div>
+        <div class="track" role="img" aria-label="Current stage: 01 Concept"><i class="now"></i><i></i><i></i><i></i></div>
+        <div class="track-l"><b>Concept</b><span>Research</span><span>Development</span><span>Active</span></div>
+      </article>
+
+      <article class="prog reveal">
+        <div class="prog-top">
+          <div class="no">04</div>
+          <div>
+            <h3>Musculoskeletal Research</h3>
+            <p class="en">Life Science</p>
+            <p class="desc">A body that moves the way you intend, for everyone. A research concept to solve challenges of muscles and the skeletal system through life science. Details will be published once intellectual property is protected.</p>
+          </div>
+          <span class="status">Concept</span>
+        </div>
+        <div class="track" role="img" aria-label="Current stage: 01 Concept"><i class="now"></i><i></i><i></i><i></i></div>
+        <div class="track-l"><b>Concept</b><span>Research</span><span>Development</span><span>Active</span></div>
+      </article>
+
+      <div class="commit reveal"><b>Our research commitment</b>We keep what is known, what is hypothesis, and what is yet to be verified clearly separate — and we publish results, good or bad.</div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">04 / Roadmap</p>
+        <h2>From a small entrance<br>to the future of life science.</h2>
+      </div>
+      <div class="road reveal">
+        <div class="step now"><p class="mono">Phase 1 — 2026</p><h3>Launch medical commercialization</h3><p>Started a business connecting healthtech companies with medical practice.</p></div>
+        <div class="step"><p class="mono">Phase 2 — 2027</p><h3>Research and verification</h3><p>Begin joint research with research institutions, advancing the scientific verification and product development of 99.9.</p></div>
+        <div class="step"><p class="mono">Phase 3</p><h3>Expand products and health businesses</h3><p>Bring verified products to market, extending into drinks, nutrition and apparel.</p></div>
+        <div class="step"><p class="mono">Phase 4</p><h3>Enter industry infrastructure</h3><p>Expand into the foundations of life science: research support, analysis, manufacturing and data.</p></div>
+        <div class="step"><p class="mono">Phase 5</p><h3>Frontier research, worldwide</h3><p>Build proprietary technology from neural interface and musculoskeletal research, and lead life science worldwide.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder" class="dark">
+    <div class="wrap">
+      <div class="sec-head reveal"><p class="mono">05 / Founder</p><span></span></div>
+      <div class="founder">
+        <div class="reveal">
+          <p class="name">Kenji Nagae</p>
+          <p class="mono" style="margin-top:4px">Founder</p>
+        </div>
+        <div class="reveal">
+          <h2>Number one,<br>or nothing.</h2>
+          <p class="body">It all began with the frustration of a body that would not move the way I wanted. After asking “why” again and again, what I found was not a lack of ability, but a version of myself that had let go of the pride to get back up the moment I fell.</p>
+          <p class="body">So I made getting back up immediately, no matter how many times I fall, the standard for myself and for this company. Knowledge, capital and technology take no shape without a vessel to hold them. That vessel is strength of mind.</p>
+          <p class="body"><strong>If the vessel that welcomes people of a number-one standard does not hold a number-one standard itself, no one will follow.</strong> That is why this company holds itself to number one, and by that standard brings science into everyday life — to be Super Luck for everyone we meet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="engage">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">06 / Engage</p>
+        <h2>Get involved.</h2>
+      </div>
+      <div class="eg reveal">
+        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">Commission us</span><span class="d">Leave clinic outreach and commercialization in Japan to us — system and all.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">Invest</span><span class="d">We will walk you through our plans and research progress.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">Research with us</span><span class="d">We welcome collaboration with universities and research institutions.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="join"><span class="mono">Join</span><span class="t">Join us</span><span class="d">We are looking for specialists who can pour their passion into these questions.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">Advise us</span><span class="d">Support from your field — patent attorneys, lawyers and more.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="other"><span class="mono">Other</span><span class="t">Anything else</span><span class="d">No inquiry is too small. Feel free to reach out.</span><span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">07 / News</p>
+        <h2>News</h2>
+      </div>
+      <ul class="news reveal">
+        <li><span class="mono">2026.11</span><span>Medical Commercialization is now open for projects in Japan.</span></li>
+        <li><span class="mono">2026.11</span><span>The Kenjitech Bio website is now live.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap ct">
+      <div class="reveal">
+        <p class="mono">08 / Contact</p>
+        <h2>Get in<br>touch.</h2>
+        <p class="txt">No inquiry is too small. We bring even the barrier to meeting us down to everyday life. The founder replies personally.</p>
+        <a class="mail" href="mailto:abe9161@gmail.com">abe9161@gmail.com</a>
+      </div>
+      <form id="cf" class="reveal" novalidate>
+        <fieldset class="seg">
+          <legend class="mono">Inquiry type</legend>
+          <label><input type="radio" name="type" value="commercialization" checked><span>Commission</span></label>
+          <label><input type="radio" name="type" value="invest"><span>Invest</span></label>
+          <label><input type="radio" name="type" value="research"><span>Research</span></label>
+          <label><input type="radio" name="type" value="join"><span>Join</span></label>
+          <label><input type="radio" name="type" value="advise"><span>Advise</span></label>
+          <label><input type="radio" name="type" value="other"><span>Other</span></label>
+        </fieldset>
+        <p class="f-note" id="f-note" aria-live="polite"></p>
+        <div class="fd"><label class="mono" for="f-name">Name (required)</label><input id="f-name" type="text" autocomplete="name" required><p class="er" id="e-name"></p></div>
+        <div class="fd"><label class="mono" for="f-org">Organization</label><input id="f-org" type="text" autocomplete="organization"></div>
+        <div class="fd"><label class="mono" for="f-mail">Email (required)</label><input id="f-mail" type="email" inputmode="email" autocomplete="email" required><p class="er" id="e-mail"></p></div>
+        <div class="fd"><label class="mono" for="f-msg">Message</label><textarea id="f-msg" rows="4"></textarea></div>
+        <div class="fd"><label class="ck"><input type="checkbox" id="f-consent"><span>I agree to the <a href="#privacy">Privacy Policy</a></span></label><p class="er" id="e-consent"></p></div>
+        <button class="btn" type="submit">Compose email</button>
+        <p class="f-note" style="margin-top:12px">Clicking the button opens your email app with your message filled in.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">09 / Company</p>
+        <h2>Company</h2>
+      </div>
+      <dl class="ov reveal">
+        <div><dt class="mono">Name</dt><dd>Kenjitech Bio</dd></div>
+        <div><dt class="mono">Founder</dt><dd>Kenji Nagae</dd></div>
+        <div><dt class="mono">Definition</dt><dd>Turning life-science technology into infrastructure anyone can use.</dd></div>
+        <div><dt class="mono">Business</dt><dd>Medical commercialization (healthcare-focused inside sales BPO, Japan) / R&amp;D and commercialization in sports science, medicine and neuroscience</dd></div>
+        <div><dt class="mono">Contact</dt><dd>abe9161@gmail.com</dd></div>
+      </dl>
+      <div class="src">
+        <p class="mono">Sources</p>
+        <p id="fn1">[1] Agriculture &amp; Livestock Industries Corporation (ALIC), “International Sugar Supply and Demand,” <i>Sugar and Starch Information</i>, July 2026 (in Japanese). Forecast by GlobalData UK Ltd. as of June 2026 (2025/26 sugar year, raw value). <a href="https://alic.go.jp/content/001288853.pdf" rel="noopener">alic.go.jp/content/001288853.pdf</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<article data-view="privacy" class="doc" hidden>
+  <div class="wrap">
+    <p class="mono"><a href="#top">← Back to top</a></p>
+    <h1>Privacy Policy</h1>
+    <p class="draft">Established November 2026</p>
+    <h2>01 Operator</h2><p>Kenjitech Bio (“we”) handles personal information obtained through this website in accordance with this policy.</p>
+    <h2>02 Information we collect</h2><p>We collect the name, organization, email address, inquiry type and message contained in emails sent to us through this website. This website does not use cookies for analytics or advertising. Because we use Google Fonts, your browser connects to Google’s servers when the page loads.</p>
+    <h2>03 Purpose of use</h2><p>We use this information only to respond to inquiries, arrange meetings, and communicate in connection with them.</p>
+    <h2>04 Disclosure to third parties</h2><p>We do not provide personal information to third parties without consent, except as required by law.</p>
+    <h2>05 Security</h2><p>We take necessary and appropriate measures to prevent unauthorized access, leakage, loss or damage of personal information.</p>
+    <h2>06 Access, correction and deletion</h2><p>We respond to requests for disclosure, correction, suspension of use or deletion in accordance with applicable law, after verifying your identity. Contact: abe9161@gmail.com</p>
+    <h2>07 Changes</h2><p>Any changes to this policy will be announced on this page.</p>
+  </div>
+</article>
+
+<article data-view="expression-policy" class="doc" hidden>
+  <div class="wrap">
+    <p class="mono"><a href="#top">← Back to top</a></p>
+    <h1>Expression Policy</h1>
+    <p class="draft">Established November 2026</p>
+    <h2>01 We separate facts from hypotheses</h2><p>We clearly separate what is known, what is hypothesis, and what is yet to be verified. We never present a hypothesis as fact.</p>
+    <h2>02 We cite our numbers</h2><p>When citing statistics or research results, we state the source. We do not publish numbers whose source we cannot confirm.</p>
+    <h2>03 We make no efficacy claims</h2><p>This website provides corporate information and does not guarantee or imply the efficacy of any product. Product claims comply with applicable laws and regulations.</p>
+    <h2>04 Forward-looking statements</h2><p>Goals and plans reflect our current thinking and are not promises of realization. This website is not a solicitation to acquire securities.</p>
+    <h2>05 Information we do not publish</h2><p>We do not publish research whose intellectual property has not yet been protected. We publish what we can, once protection is in place.</p>
+    <h2>06 Corrections</h2><p>If we find an error, we correct it and keep a record of the date and content of the correction.</p>
+  </div>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#top" class="logo"><b>Kenjitech</b><span> Bio</span></a>
+      <p>© 2026 Kenjitech Bio. This site includes concepts at an early stage. It describes the direction of our business and is not a solicitation of investment or a guarantee of scientific efficacy.</p>
+    </div>
+    <nav aria-label="Footer"><a href="#privacy">Privacy Policy</a><a href="#expression-policy">Expression Policy</a><a href="#contact">Contact</a></nav>
+  </div>
+</footer>
+
+<script>
+document.body.classList.remove('nojs');
+const EMAIL='abe9161@gmail.com';
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('.bar').forEach(b=>b.classList.add('in'));io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const mb=document.querySelector('.mb'),menu=document.getElementById('menu');
+const setMenu=o=>{menu.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu');document.body.style.overflow=o?'hidden':''};
+mb.onclick=()=>setMenu(!menu.classList.contains('open'));
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>setMenu(false));
+
+const views=document.querySelectorAll('[data-view]');
+function route(){const h=location.hash.slice(1);const doc=['privacy','expression-policy'].includes(h)?h:'home';
+  views.forEach(v=>v.hidden=v.dataset.view!==doc);if(doc!=='home')scrollTo(0,0);}
+addEventListener('hashchange',route);route();
+
+const notes={commercialization:'A line about your product and the kinds of clinics you want to reach helps us respond faster.',invest:'We share materials such as our business plan individually after a meeting.',research:'Please tell us your affiliation and research interests.',join:'Please tell us about your background and the area you want to work on.',advise:'Please tell us your area of expertise.',other:'Anything at all — feel free.'};
+const labels={commercialization:'Commission',invest:'Investment',research:'Research collaboration',join:'Joining',advise:'Advisory',other:'General'};
+const form=document.getElementById('cf'),fnote=document.getElementById('f-note');
+const typeVal=()=>form.querySelector('input[name=type]:checked').value;
+const setNote=()=>fnote.textContent=notes[typeVal()];
+form.querySelectorAll('input[name=type]').forEach(r=>r.onchange=setNote);setNote();
+document.querySelectorAll('a[data-type]').forEach(a=>a.addEventListener('click',()=>{const r=form.querySelector(`input[value="${a.dataset.type}"]`);if(r){r.checked=true;setNote()}}));
+const okMail=m=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m);
+form.onsubmit=e=>{e.preventDefault();
+  const n=document.getElementById('f-name').value.trim(),m=document.getElementById('f-mail').value.trim(),c=document.getElementById('f-consent').checked;
+  document.getElementById('e-name').textContent=n?'':'Please enter your name.';
+  document.getElementById('e-mail').textContent=okMail(m)?'':'Please check your email address.';
+  document.getElementById('e-consent').textContent=c?'':'Please agree to the Privacy Policy.';
+  if(!n||!okMail(m)||!c)return;
+  const t=labels[typeVal()],o=document.getElementById('f-org').value.trim(),msg=document.getElementById('f-msg').value.trim();
+  const body=`Inquiry: ${t}\nName: ${n}\nOrganization: ${o}\nEmail: ${m}\n\n${msg}`;
+  location.href=`mailto:${EMAIL}?subject=${encodeURIComponent('[Kenjitech Bio] '+t+' inquiry')}&body=${encodeURIComponent(body)}`;
+};
+
+(()=>{const cv=document.getElementById('field');if(!cv||reduce)return;const x=cv.getContext('2d');let W,H,pts=[],mx=-999,my=-999;const dpr=Math.min(devicePixelRatio||1,2);
+function size(){const r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+  const n=Math.round(Math.min(70,W*H/16000));pts=Array.from({length:n},(_,i)=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,a:i%9===0}));}
+function tick(){x.clearRect(0,0,W,H);
+  for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+    const dx=p.x-mx,dy=p.y-my,d=Math.hypot(dx,dy);if(d<120&&d>0){p.x+=dx/d*.8;p.y+=dy/d*.8}}
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+    if(d<130){x.strokeStyle=`rgba(10,10,10,${.12*(1-d/130)})`;x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+  for(const p of pts){x.fillStyle=p.a?'#0057ff':'rgba(10,10,10,.35)';x.beginPath();x.arc(p.x,p.y,p.a?3:2,0,7);x.fill()}
+  requestAnimationFrame(tick)}
+addEventListener('resize',size);addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+size();tick();})();
+</script>
+</body>
+</html>
