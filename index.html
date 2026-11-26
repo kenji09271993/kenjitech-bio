@@ -9,6 +9,7 @@
 <meta property="og:description" content="科学の力で、ヒトの限界を超える。人に深く寄り添うバイオテクノロジー企業。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kenji09271993.github.io/kenjitech-bio/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23fff%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-family=%22Inter,Arial%22 font-weight=%22700%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22%230a0a0a%22%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -41,6 +42,17 @@ section{padding:120px 0;border-bottom:1px solid var(--line)}
 .principles div{padding:32px 32px 0 0}
 .principles h3{font-size:18px;font-weight:700;margin:12px 0 8px}
 .principles p{color:var(--sub);font-size:15px}
+.vision-body{margin-top:96px;padding-top:48px;border-top:1px solid var(--ink)}
+.vision-text{font-size:clamp(18px,2vw,23px);font-weight:500;line-height:2;margin:20px 0 40px}
+.vision-text .hl{color:var(--accent)}
+.paradox{font-size:clamp(22px,2.8vw,30px);font-weight:700;line-height:1.6;letter-spacing:-.01em;padding-left:20px;border-left:3px solid var(--accent)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:72px}
+.process div{background:var(--bg);padding:28px 24px}
+.process h3{font-size:18px;font-weight:700;margin:10px 0 6px}
+.process p:last-child{color:var(--sub);font-size:14px}
+.defs{margin-top:48px;display:grid;gap:16px}
+.defs div{display:grid;grid-template-columns:160px 1fr;gap:24px;font-size:14px}
+.defs dt{font-weight:700}.defs dd{color:var(--sub)}
 .venture{display:grid;grid-template-columns:80px 1fr 200px;gap:32px;padding:40px 0;border-top:1px solid var(--line);align-items:start}
 .venture:last-child{border-bottom:1px solid var(--line)}
 .venture .no{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--sub)}
@@ -84,8 +96,10 @@ br.sp{display:none}
   section{padding:80px 0}
   .sec-head,.founder{grid-template-columns:1fr;gap:16px}
   .sec-head{margin-bottom:40px}
-  .principles{grid-template-columns:1fr}
-  .principles div{padding:24px 0 0}
+  .process{grid-template-columns:1fr 1fr}
+  .process div{padding:20px 16px}
+  .defs div{grid-template-columns:1fr;gap:4px}
+  br.pc{display:none}
   .venture{grid-template-columns:1fr;gap:12px}
   .status{justify-self:start}
 }
@@ -97,7 +111,7 @@ br.sp{display:none}
   <div class="wrap">
     <a href="#" class="logo" aria-label="Kenjitech Bio"><b>Kenjitech</b><span> Bio</span></a>
     <nav>
-      <a href="#mission">Mission</a>
+      <a href="#vision">Vision</a>
       <a href="#ventures">Ventures</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#founder">Founder</a>
@@ -112,34 +126,36 @@ br.sp{display:none}
     <div class="wrap">
       <p class="mono">Kenjitech Bio — Founding 2026</p>
       <h1>科学の力で、<br><em>ヒトの限界</em>を<br class="sp">超える。</h1>
-      <p class="lead">人に深く寄り添うバイオテクノロジー企業。最先端の技術を、研究室の中ではなく、一人ひとりのすぐそばへ。</p>
+      <p class="lead">生命科学の技術を、誰もが使えるインフラに変える。最先端の技術を、研究室の中ではなく、一人ひとりのすぐそばへ。</p>
     </div>
   </div>
 
-  <section id="mission">
+  <section id="vision">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">01 / Mission</p>
+        <p class="mono">01 / Vision</p>
         <h2>人に深く寄り添う。</h2>
       </div>
       <p class="mission-quote reveal">どれほど優れた技術を<br class="sp">持っていても、<br>極めて身近に存在させなければ、<br>それは<span class="hl">革新</span>とは呼べない。</p>
-      <div class="principles reveal">
-        <div>
-          <p class="mono">Principle 01</p>
-          <h3>寄り添う</h3>
-          <p>技術の出発点は、目の前の一人の課題。現場に入り、声を聞き、本当に必要とされるものだけをつくる。</p>
-        </div>
-        <div>
-          <p class="mono">Principle 02</p>
-          <h3>身近にする</h3>
-          <p>研究成果を、日常で手に取れる製品とサービスへ。届いてはじめて、科学は人の可能性を広げる。</p>
-        </div>
-        <div>
-          <p class="mono">Principle 03</p>
-          <h3>検証で語る</h3>
-          <p>主張ではなく、データで示す。研究機関・専門家と連携し、確かめたことだけを世に出す。</p>
-        </div>
+      <div class="vision-body reveal">
+        <p class="mono">Kenjitech Vision</p>
+        <p class="vision-text">世界一の基準を持ったコミュニティが、<br>研究、開発、製造、販売、利用、<br class="pc">そして共に働くこと、投資すること、出会うことに至るまで、<br>会社に関わる全てのプロセスのハードルを、<br class="pc">極めて日常まで下げる。<br>それが人と深く寄り添う機会を最大化し、<br>あなたにとって私たちが<span class="hl">「超幸運」</span>である未来を創り出す。</p>
+        <p class="paradox">内には、世界一の基準を。<br>外には、日常のハードルを。</p>
       </div>
+      <div class="process reveal">
+        <div><p class="mono">Research</p><h3>研究</h3><p>研究者や学生が、気軽に参加できる。</p></div>
+        <div><p class="mono">Development</p><h3>開発</h3><p>アスリートや現場の声が、そのまま製品になる。</p></div>
+        <div><p class="mono">Manufacturing</p><h3>製造</h3><p>高い品質を、無理のないコストで。</p></div>
+        <div><p class="mono">Distribution</p><h3>販売</h3><p>優れた医療技術を、現場まで届ける。</p></div>
+        <div><p class="mono">Use</p><h3>利用</h3><p>科学で裏付けた価値を、毎日の一本で。</p></div>
+        <div><p class="mono">Work</p><h3>働く</h3><p>どこにも属さず、どこにでも居場所がある。</p></div>
+        <div><p class="mono">Invest</p><h3>投資・提携</h3><p>進捗と検証結果を、開いて見せる。</p></div>
+        <div><p class="mono">Encounter</p><h3>出会う</h3><p>誰もが、気軽に声をかけられる。</p></div>
+      </div>
+      <dl class="defs reveal">
+        <div><dt>コミュニティ</dt><dd>社員、研究者、アスリート、顧客、投資家、提携先。Kenjitech Bioに関わる全ての人。</dd></div>
+        <div><dt>超幸運</dt><dd>出会えたことが、その人にとって最大の幸運だったと言われる存在であること。</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -147,7 +163,7 @@ br.sp{display:none}
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="mono">02 / Ventures</p>
-        <h2>三つの事業で、<br>未来を身近にする。</h2>
+        <h2>四つの領域で、<br>未来を身近にする。</h2>
       </div>
 
       <article class="venture reveal">
@@ -179,6 +195,16 @@ br.sp{display:none}
           <p class="en">Neural Language Interface</p>
           <p>言葉の壁を、脳から越える。病気の有無にかかわらず、誰もが外国語で話せる未来へ。神経信号から発話を読み解く技術の進歩を、日常のコミュニケーションへつなぐ研究構想です。</p>
           <p class="goal">英会話ができるようになるインターフェースの実現を目指す。</p>
+        </div>
+        <span class="status">Concept</span>
+      </article>
+
+      <article class="venture reveal">
+        <div class="no">04</div>
+        <div>
+          <h3>運動器領域の研究</h3>
+          <p class="en">Musculoskeletal Research</p>
+          <p>思い通りに動く身体を、すべての人に。筋肉や骨格にまつわる課題を、生命科学で解く研究構想です。詳細は知的財産の保護を終えてから公開します。</p>
         </div>
         <span class="status">Concept</span>
       </article>
@@ -233,7 +259,7 @@ br.sp{display:none}
           <p class="role">Kenji Nagae — Founder</p>
         </div>
         <div>
-          <blockquote>技術の大きさではなく、人との距離で、革新の価値は決まる。</blockquote>
+          <blockquote>世界一か、それ以外か。</blockquote>
           <p>どんな構想も、最後に問われるのはそれをやり抜く精神の強さだと考えている。誰もまだ見ていない未来を、誰よりも先に信じ、最後までやり切る。それがKenjitech Bioのすべての基盤である。</p>
           <p>医療の現場に深く入り込み、一人ひとりの課題に寄り添うことから始める。そこで得た理解を、科学で確かめ、日常で使える形にして届けていく。</p>
         </div>
@@ -245,7 +271,8 @@ br.sp{display:none}
     <div class="wrap">
       <p class="mono reveal">05 / Contact</p>
       <a class="mail reveal" href="mailto:abe9161@gmail.com">abe9161@gmail.com</a>
-      <ul class="reveal">
+      <p class="reveal" style="color:var(--sub);max-width:640px">ご相談の大小は問いません。出会うことのハードルも、私たちは日常まで下げます。</p>
+      <ul class="reveal" style="margin-top:24px">
         <li>— ヘルステック企業の新規開拓・事業化支援のご相談</li>
         <li>— 研究機関・専門家との共同研究</li>
         <li>— 投資家・提携先とのお話</li>
