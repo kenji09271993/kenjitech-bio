@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenjitech Bio — 科学の力で、ヒトの限界を超える。</title>
+<meta name="description" content="Kenjitech Bioは、人に深く寄り添うバイオテクノロジー企業です。医療技術の事業化支援から始め、スポーツ栄養、神経インターフェースへと進みます。">
+<meta property="og:title" content="Kenjitech Bio">
+<meta property="og:description" content="科学の力で、ヒトの限界を超える。人に深く寄り添うバイオテクノロジー企業。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kenjitech.bio/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--sub:#5c5c5c;--line:#e6e6e6;--bg:#fff;--accent:#0057ff;--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sub)}
+.logo{font-size:20px;letter-spacing:-.02em}
+.logo b{font-weight:700}.logo span{font-weight:300}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav a{margin-left:28px;font-size:14px;color:var(--sub);transition:color .2s}
+nav a:hover{color:var(--ink)}
+.hero{padding:140px 0 120px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero h1{font-size:clamp(36px,6.4vw,76px);font-weight:700;line-height:1.2;letter-spacing:-.03em;margin:24px 0 32px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--sub);max-width:640px}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 80% 20%,#000 0,transparent 60%);-webkit-mask-image:radial-gradient(ellipse at 80% 20%,#000 0,transparent 60%);opacity:.7;pointer-events:none}
+.hero .wrap{position:relative}
+section{padding:120px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:240px 1fr;gap:48px;margin-bottom:64px}
+.sec-head h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.35}
+.mission-quote{font-size:clamp(22px,2.8vw,32px);font-weight:500;line-height:1.6;letter-spacing:-.01em;max-width:860px}
+.mission-quote .hl{color:var(--accent)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:72px}
+.principles div{padding:32px 32px 0 0}
+.principles h3{font-size:18px;font-weight:700;margin:12px 0 8px}
+.principles p{color:var(--sub);font-size:15px}
+.venture{display:grid;grid-template-columns:80px 1fr 200px;gap:32px;padding:40px 0;border-top:1px solid var(--line);align-items:start}
+.venture:last-child{border-bottom:1px solid var(--line)}
+.venture .no{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--sub)}
+.venture h3{font-size:24px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+.venture .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--sub);letter-spacing:.08em;margin-bottom:16px}
+.venture p{color:var(--sub);font-size:15px;max-width:620px}
+.venture .goal{margin-top:16px;font-size:14px;color:var(--ink)}
+.status{justify-self:end;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--sub);white-space:nowrap}
+.status.active{border-color:var(--accent);color:var(--accent)}
+.status.active::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.road{position:relative;padding-left:32px}
+.road::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.step{position:relative;padding:0 0 48px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:-32px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--ink)}
+.step.now::before{background:var(--accent);border-color:var(--accent)}
+.step h3{font-size:20px;font-weight:700;margin:6px 0 6px}
+.step p{color:var(--sub);font-size:15px;max-width:640px}
+.founder{display:grid;grid-template-columns:240px 1fr;gap:48px}
+.founder .name{font-size:28px;font-weight:700;letter-spacing:-.01em}
+.founder .role{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--sub);letter-spacing:.08em;margin-top:4px}
+.founder blockquote{font-size:clamp(19px,2.2vw,24px);font-weight:500;line-height:1.7;margin-bottom:28px}
+.founder p{color:var(--sub);max-width:680px;margin-bottom:16px}
+.contact{text-align:left}
+.contact a.mail{display:inline-block;font-size:clamp(26px,4.4vw,52px);font-weight:700;letter-spacing:-.02em;border-bottom:2px solid var(--ink);margin:24px 0 32px;transition:color .2s,border-color .2s}
+.contact a.mail:hover{color:var(--accent);border-color:var(--accent)}
+.contact ul{list-style:none;color:var(--sub);font-size:15px}
+.contact li{padding:6px 0}
+footer{padding:48px 0 64px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer p{font-size:12px;color:var(--sub);max-width:640px}
+br.sp{display:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.status.active::before{animation:none}}
+@media (max-width:820px){
+  nav{display:none}
+  br.sp{display:inline}
+  .hero{padding:96px 0 80px}
+  section{padding:80px 0}
+  .sec-head,.founder{grid-template-columns:1fr;gap:16px}
+  .sec-head{margin-bottom:40px}
+  .principles{grid-template-columns:1fr}
+  .principles div{padding:24px 0 0}
+  .venture{grid-template-columns:1fr;gap:12px}
+  .status{justify-self:start}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Kenjitech Bio"><b>Kenjitech</b><span> Bio</span></a>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="mono">Kenjitech Bio — Founding 2026</p>
+      <h1>科学の力で、<br><em>ヒトの限界</em>を<br class="sp">超える。</h1>
+      <p class="lead">人に深く寄り添うバイオテクノロジー企業。最先端の技術を、研究室の中ではなく、一人ひとりのすぐそばへ。</p>
+    </div>
+  </div>
+
+  <section id="mission">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">01 / Mission</p>
+        <h2>人に深く寄り添う。</h2>
+      </div>
+      <p class="mission-quote reveal">どれほど優れた技術を<br class="sp">持っていても、<br>極めて身近に存在させなければ、<br>それは<span class="hl">革新</span>とは呼べない。</p>
+      <div class="principles reveal">
+        <div>
+          <p class="mono">Principle 01</p>
+          <h3>寄り添う</h3>
+          <p>技術の出発点は、目の前の一人の課題。現場に入り、声を聞き、本当に必要とされるものだけをつくる。</p>
+        </div>
+        <div>
+          <p class="mono">Principle 02</p>
+          <h3>身近にする</h3>
+          <p>研究成果を、日常で手に取れる製品とサービスへ。届いてはじめて、科学は人の可能性を広げる。</p>
+        </div>
+        <div>
+          <p class="mono">Principle 03</p>
+          <h3>検証で語る</h3>
+          <p>主張ではなく、データで示す。研究機関・専門家と連携し、確かめたことだけを世に出す。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ventures">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">02 / Ventures</p>
+        <h2>三つの事業で、<br>未来を身近にする。</h2>
+      </div>
+
+      <article class="venture reveal">
+        <div class="no">01</div>
+        <div>
+          <h3>メディカル・コマーシャライゼーション</h3>
+          <p class="en">Medical Commercialization</p>
+          <p>優れた医療技術が、必要とする医療機関に届いていない。私たちはヘルステック企業と全国のクリニック・病院をつなぎ、導入までの道筋を仕組みで設計します。現場の声を一件ずつ記録し、医療の本当の課題を蓄積していきます。</p>
+          <p class="goal">→ ヘルステック企業の新規開拓支援を受付中</p>
+        </div>
+        <span class="status active">Active</span>
+      </article>
+
+      <article class="venture reveal">
+        <div class="no">02</div>
+        <div>
+          <h3>99.9（Three Nines）</h3>
+          <p class="en">Performance Nutrition</p>
+          <p>運動中のエネルギーを、科学で再設計する。高純度の果糖を核に、アスリートのためのドリンクとアパレルを開発します。研究機関との検証を経て、確かめた価値だけを製品にします。</p>
+          <p class="goal">長期目標：世界の砂糖市場の20%を、果糖製品に置き換える。</p>
+        </div>
+        <span class="status">Research</span>
+      </article>
+
+      <article class="venture reveal">
+        <div class="no">03</div>
+        <div>
+          <h3>ニューラル・ランゲージ・インターフェース</h3>
+          <p class="en">Neural Language Interface</p>
+          <p>言葉の壁を、脳から越える。病気の有無にかかわらず、誰もが外国語で話せる未来へ。神経信号から発話を読み解く技術の進歩を、日常のコミュニケーションへつなぐ研究構想です。</p>
+          <p class="goal">英会話ができるようになるインターフェースの実現を目指す。</p>
+        </div>
+        <span class="status">Concept</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">03 / Roadmap</p>
+        <h2>小さな入口から、<br>生命科学の未来へ。</h2>
+      </div>
+      <div class="road reveal">
+        <div class="step now">
+          <p class="mono">Phase 1 — 2026</p>
+          <h3>医療技術の事業化支援を開始</h3>
+          <p>ヘルステック企業と医療現場をつなぐ事業を始動。法人設立（2026年11月予定）。</p>
+        </div>
+        <div class="step">
+          <p class="mono">Phase 2 — 2027</p>
+          <h3>研究と検証</h3>
+          <p>研究機関との共同研究を開始し、99.9の科学的な検証と製品開発を進める。</p>
+        </div>
+        <div class="step">
+          <p class="mono">Phase 3</p>
+          <h3>製品と健康事業の拡張</h3>
+          <p>検証済みの製品を市場へ。飲料・栄養・アパレルへと顧客との接点を広げる。</p>
+        </div>
+        <div class="step">
+          <p class="mono">Phase 4</p>
+          <h3>産業基盤への進出</h3>
+          <p>研究支援・分析・製造・データなど、生命科学を支える基盤事業へ。</p>
+        </div>
+        <div class="step">
+          <p class="mono">Phase 5</p>
+          <h3>先端研究と世界へ</h3>
+          <p>神経インターフェースをはじめとする独自技術を獲得し、世界の生命科学をリードする。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">04 / Founder</p>
+        <h2>創業者</h2>
+      </div>
+      <div class="founder reveal">
+        <div>
+          <p class="name">永江 賢司</p>
+          <p class="role">Kenji Nagae — Founder</p>
+        </div>
+        <div>
+          <blockquote>技術の大きさではなく、人との距離で、革新の価値は決まる。</blockquote>
+          <p>どんな構想も、最後に問われるのはそれをやり抜く精神の強さだと考えている。誰もまだ見ていない未来を、誰よりも先に信じ、最後までやり切る。それがKenjitech Bioのすべての基盤である。</p>
+          <p>医療の現場に深く入り込み、一人ひとりの課題に寄り添うことから始める。そこで得た理解を、科学で確かめ、日常で使える形にして届けていく。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="mono reveal">05 / Contact</p>
+      <a class="mail reveal" href="mailto:contact@kenjitech.bio">contact@kenjitech.bio</a>
+      <ul class="reveal">
+        <li>— ヘルステック企業の新規開拓・事業化支援のご相談</li>
+        <li>— 研究機関・専門家との共同研究</li>
+        <li>— 投資家・提携先とのお話</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="logo"><b>Kenjitech</b><span> Bio</span></a>
+    <p>© 2026 Kenjitech Bio. 本サイトには構想段階の内容を含みます。記載の内容は事業の方向性を示すものであり、投資の勧誘や科学的有効性の保証を目的とするものではありません。</p>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
