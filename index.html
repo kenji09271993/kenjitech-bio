@@ -155,6 +155,7 @@ section{padding:120px 0;border-bottom:1px solid var(--line)}
 .seg input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
 .seg input:focus-visible+span{outline:2px solid var(--accent)}
 .fd{margin-bottom:18px}
+.fd[hidden]{display:none}
 .fd label{display:block;margin-bottom:6px}
 .fd input,.fd textarea{width:100%;border:0;border-bottom:1px solid #bbb;padding:10px 0;background:transparent;outline:none;font-size:16px}
 .fd input:focus,.fd textarea:focus{border-color:var(--accent)}
@@ -443,7 +444,7 @@ br.sp{display:none}
         <h2>この会社に、<br>関わる。</h2>
       </div>
       <div class="eg reveal">
-        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">依頼する</span><span class="d">医療機関への新規開拓・事業化を、仕組みごとお任せください。</span><span class="ar">→</span></a>
+        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">製品を届ける</span><span class="d">ヘルステック企業の方へ。貴社の製品を、必要とする医療機関に届ける仕組みをつくります。</span><span class="ar">→</span></a>
         <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">投資する</span><span class="d">事業計画と研究の進み具合をご説明します。</span><span class="ar">→</span></a>
         <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">共同で研究する</span><span class="d">大学・研究機関の方との研究協力を歓迎します。</span><span class="ar">→</span></a>
         <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">専門家として関わる</span><span class="d">弁理士・弁護士など、専門領域からのご支援を。</span><span class="ar">→</span></a>
@@ -492,7 +493,7 @@ br.sp{display:none}
       <form id="cf" class="reveal" novalidate>
         <fieldset class="seg">
           <legend class="mono">ご相談の種類</legend>
-          <label><input type="radio" name="type" value="commercialization" checked><span>事業化支援の依頼</span></label>
+          <label><input type="radio" name="type" value="commercialization" checked><span>製品を医療機関に届けたい（企業の方）</span></label>
           <label><input type="radio" name="type" value="invest"><span>投資</span></label>
           <label><input type="radio" name="type" value="research"><span>研究協力</span></label>
           <label><input type="radio" name="type" value="advise"><span>専門家</span></label>
@@ -501,6 +502,9 @@ br.sp{display:none}
         <div class="fd"><label class="mono" for="f-name">お名前（必須）</label><input id="f-name" type="text" autocomplete="name" required><p class="er" id="e-name"></p></div>
         <div class="fd"><label class="mono" for="f-org">ご所属（会社・機関名）</label><input id="f-org" type="text" autocomplete="organization"></div>
         <div class="fd"><label class="mono" for="f-mail">メールアドレス（必須）</label><input id="f-mail" type="email" inputmode="email" autocomplete="email" required><p class="er" id="e-mail"></p></div>
+        <div class="fd cx"><label class="mono" for="f-prod">製品・サービス名（必須）</label><input id="f-prod" type="text"><p class="er" id="e-prod"></p></div>
+        <div class="fd cx"><label class="mono" for="f-url">製品のURL</label><input id="f-url" type="url" inputmode="url"></div>
+        <div class="fd cx"><label class="mono" for="f-target">届けたい医療機関（診療科・規模・地域など）</label><input id="f-target" type="text"></div>
         <div class="fd"><label class="mono" for="f-msg">ご相談内容</label><textarea id="f-msg" rows="5"></textarea></div>
         <div class="fd"><label class="ck"><input type="checkbox" id="f-consent"><span><a href="#privacy">プライバシーポリシー</a>に同意する</span></label><p class="er" id="e-consent"></p></div>
         <button class="btn" type="submit">メールを作成する</button>
@@ -605,12 +609,12 @@ function route(){const h=location.hash.slice(1);const doc=['privacy','expression
   views.forEach(v=>v.hidden=v.dataset.view!==doc);if(doc!=='home')scrollTo(0,0);}
 addEventListener('hashchange',route);route();
 
-const notes={commercialization:'貴社の製品と、届けたい医療機関の種類を一言添えていただけるとスムーズです。',invest:'事業計画などの資料は、面談のうえ個別にご案内します。',research:'ご所属と、関心のある研究領域をお書きください。',join:'ご経歴と、関わりたい領域をお書きください。',advise:'ご専門の領域をお書きください。',other:'どんなことでもお気軽にどうぞ。'};
-const labels={commercialization:'事業化支援の依頼',invest:'投資',research:'研究協力',join:'参画',advise:'専門家として',other:'その他'};
+const notes={commercialization:'医療・ヘルスケア領域の製品やサービスをお持ちの企業の方が対象です。',invest:'事業計画などの資料は、面談のうえ個別にご案内します。',research:'ご所属と、関心のある研究領域をお書きください。',join:'ご経歴と、関わりたい領域をお書きください。',advise:'ご専門の領域をお書きください。',other:'どんなことでもお気軽にどうぞ。'};
+const labels={commercialization:'製品の事業化支援',invest:'投資',research:'研究協力',join:'参画',advise:'専門家として',other:'その他'};
 const form=document.getElementById('cf'),fnote=document.getElementById('f-note');
 const typeVal=()=>form.querySelector('input[name=type]:checked').value;
 const ph={commercialization:'例：製品名、届けたい医療機関の種類（診療科・規模・地域）、希望する開始時期',invest:'例：ご所属、投資の区分（VC・事業会社・個人など）、関心のある事業',research:'例：ご所属、研究分野、関心のある研究テーマ',advise:'例：ご専門の領域、関わり方のご提案'};
-const setNote=()=>{fnote.textContent=notes[typeVal()];document.getElementById('f-msg').placeholder=ph[typeVal()]};
+const setNote=()=>{document.querySelectorAll('.cx').forEach(el=>el.hidden=typeVal()!=='commercialization');fnote.textContent=notes[typeVal()];document.getElementById('f-msg').placeholder=ph[typeVal()]};
 form.querySelectorAll('input[name=type]').forEach(r=>r.onchange=setNote);setNote();
 document.querySelectorAll('a[data-type]').forEach(a=>a.addEventListener('click',()=>{const r=form.querySelector(`input[value="${a.dataset.type}"]`);if(r){r.checked=true;setNote()}}));
 const okMail=m=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m);
@@ -619,9 +623,11 @@ form.onsubmit=e=>{e.preventDefault();
   document.getElementById('e-name').textContent=n?'':'お名前を入力してください。';
   document.getElementById('e-mail').textContent=okMail(m)?'':'メールアドレスの形式を確認してください。';
   document.getElementById('e-consent').textContent=c?'':'プライバシーポリシーへの同意が必要です。';
-  if(!n||!okMail(m)||!c)return;
+  const isC=typeVal()==='commercialization',pr=document.getElementById('f-prod').value.trim();document.getElementById('e-prod').textContent=(isC&&!pr)?'製品・サービス名を入力してください。':'';
+  if(!n||!okMail(m)||!c||(isC&&!pr))return;
   const t=labels[typeVal()],o=document.getElementById('f-org').value.trim(),msg=document.getElementById('f-msg').value.trim();
-  const body=`ご相談の種類：${t}\nお名前：${n}\nご所属：${o}\nメールアドレス：${m}\n\n${msg}`;
+  const cx=isC?`\n製品・サービス名：${pr}\n製品のURL：${document.getElementById('f-url').value.trim()}\n届けたい医療機関：${document.getElementById('f-target').value.trim()}`:'';
+  const body=`ご相談の種類：${t}\nお名前：${n}\nご所属：${o}\nメールアドレス：${m}${cx}\n\n${msg}`;
   location.href=`mailto:${EMAIL}?subject=${encodeURIComponent('【Kenjitech Bio】'+t+'のご相談')}&body=${encodeURIComponent(body)}`;
 };
 

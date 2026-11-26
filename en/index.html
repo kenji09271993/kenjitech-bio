@@ -155,6 +155,7 @@ section{padding:120px 0;border-bottom:1px solid var(--line)}
 .seg input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
 .seg input:focus-visible+span{outline:2px solid var(--accent)}
 .fd{margin-bottom:18px}
+.fd[hidden]{display:none}
 .fd label{display:block;margin-bottom:6px}
 .fd input,.fd textarea{width:100%;border:0;border-bottom:1px solid #bbb;padding:10px 0;background:transparent;outline:none;font-size:16px}
 .fd input:focus,.fd textarea:focus{border-color:var(--accent)}
@@ -437,7 +438,7 @@ br.sp{display:none}
         <h2>Get involved.</h2>
       </div>
       <div class="eg reveal">
-        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">Commission us</span><span class="d">Leave clinic outreach and commercialization in Japan to us — system and all.</span><span class="ar">→</span></a>
+        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">Bring your product to clinics</span><span class="d">For healthtech companies: we build the path that brings your product to the clinics in Japan that need it.</span><span class="ar">→</span></a>
         <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">Invest</span><span class="d">We will walk you through our plans and research progress.</span><span class="ar">→</span></a>
         <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">Research with us</span><span class="d">We welcome collaboration with universities and research institutions.</span><span class="ar">→</span></a>
         <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">Advise us</span><span class="d">Support from your field — patent attorneys, lawyers and more.</span><span class="ar">→</span></a>
@@ -486,7 +487,7 @@ br.sp{display:none}
       <form id="cf" class="reveal" novalidate>
         <fieldset class="seg">
           <legend class="mono">Inquiry type</legend>
-          <label><input type="radio" name="type" value="commercialization" checked><span>Commission</span></label>
+          <label><input type="radio" name="type" value="commercialization" checked><span>Bring a product to clinics (companies)</span></label>
           <label><input type="radio" name="type" value="invest"><span>Invest</span></label>
           <label><input type="radio" name="type" value="research"><span>Research</span></label>
           <label><input type="radio" name="type" value="advise"><span>Advise</span></label>
@@ -495,6 +496,9 @@ br.sp{display:none}
         <div class="fd"><label class="mono" for="f-name">Name (required)</label><input id="f-name" type="text" autocomplete="name" required><p class="er" id="e-name"></p></div>
         <div class="fd"><label class="mono" for="f-org">Organization</label><input id="f-org" type="text" autocomplete="organization"></div>
         <div class="fd"><label class="mono" for="f-mail">Email (required)</label><input id="f-mail" type="email" inputmode="email" autocomplete="email" required><p class="er" id="e-mail"></p></div>
+        <div class="fd cx"><label class="mono" for="f-prod">Product / service name (required)</label><input id="f-prod" type="text"><p class="er" id="e-prod"></p></div>
+        <div class="fd cx"><label class="mono" for="f-url">Product URL</label><input id="f-url" type="url" inputmode="url"></div>
+        <div class="fd cx"><label class="mono" for="f-target">Target clinics (specialty, size, region)</label><input id="f-target" type="text"></div>
         <div class="fd"><label class="mono" for="f-msg">Message</label><textarea id="f-msg" rows="5"></textarea></div>
         <div class="fd"><label class="ck"><input type="checkbox" id="f-consent"><span>I agree to the <a href="#privacy">Privacy Policy</a></span></label><p class="er" id="e-consent"></p></div>
         <button class="btn" type="submit">Compose email</button>
@@ -598,12 +602,12 @@ function route(){const h=location.hash.slice(1);const doc=['privacy','expression
   views.forEach(v=>v.hidden=v.dataset.view!==doc);if(doc!=='home')scrollTo(0,0);}
 addEventListener('hashchange',route);route();
 
-const notes={commercialization:'A line about your product and the kinds of clinics you want to reach helps us respond faster.',invest:'We share materials such as our business plan individually after a meeting.',research:'Please tell us your affiliation and research interests.',join:'Please tell us about your background and the area you want to work on.',advise:'Please tell us your area of expertise.',other:'Anything at all — feel free.'};
-const labels={commercialization:'Commission',invest:'Investment',research:'Research collaboration',join:'Joining',advise:'Advisory',other:'General'};
+const notes={commercialization:'For companies with a healthcare product or service.',invest:'We share materials such as our business plan individually after a meeting.',research:'Please tell us your affiliation and research interests.',join:'Please tell us about your background and the area you want to work on.',advise:'Please tell us your area of expertise.',other:'Anything at all — feel free.'};
+const labels={commercialization:'Product commercialization',invest:'Investment',research:'Research collaboration',join:'Joining',advise:'Advisory',other:'General'};
 const form=document.getElementById('cf'),fnote=document.getElementById('f-note');
 const typeVal=()=>form.querySelector('input[name=type]:checked').value;
 const ph={commercialization:'e.g. product name, the kinds of clinics you want to reach (specialty, size, region), preferred start',invest:'e.g. affiliation, investor type (VC, corporate, individual), programs of interest',research:'e.g. affiliation, research field, topics of interest',advise:'e.g. area of expertise, how you would like to be involved'};
-const setNote=()=>{fnote.textContent=notes[typeVal()];document.getElementById('f-msg').placeholder=ph[typeVal()]};
+const setNote=()=>{document.querySelectorAll('.cx').forEach(el=>el.hidden=typeVal()!=='commercialization');fnote.textContent=notes[typeVal()];document.getElementById('f-msg').placeholder=ph[typeVal()]};
 form.querySelectorAll('input[name=type]').forEach(r=>r.onchange=setNote);setNote();
 document.querySelectorAll('a[data-type]').forEach(a=>a.addEventListener('click',()=>{const r=form.querySelector(`input[value="${a.dataset.type}"]`);if(r){r.checked=true;setNote()}}));
 const okMail=m=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m);
@@ -612,9 +616,11 @@ form.onsubmit=e=>{e.preventDefault();
   document.getElementById('e-name').textContent=n?'':'Please enter your name.';
   document.getElementById('e-mail').textContent=okMail(m)?'':'Please check your email address.';
   document.getElementById('e-consent').textContent=c?'':'Please agree to the Privacy Policy.';
-  if(!n||!okMail(m)||!c)return;
+  const isC=typeVal()==='commercialization',pr=document.getElementById('f-prod').value.trim();document.getElementById('e-prod').textContent=(isC&&!pr)?'Please enter your product or service name.':'';
+  if(!n||!okMail(m)||!c||(isC&&!pr))return;
   const t=labels[typeVal()],o=document.getElementById('f-org').value.trim(),msg=document.getElementById('f-msg').value.trim();
-  const body=`Inquiry: ${t}\nName: ${n}\nOrganization: ${o}\nEmail: ${m}\n\n${msg}`;
+  const cx=isC?`\nProduct: ${pr}\nProduct URL: ${document.getElementById('f-url').value.trim()}\nTarget clinics: ${document.getElementById('f-target').value.trim()}`:'';
+  const body=`Inquiry: ${t}\nName: ${n}\nOrganization: ${o}\nEmail: ${m}${cx}\n\n${msg}`;
   location.href=`mailto:${EMAIL}?subject=${encodeURIComponent('[Kenjitech Bio] '+t+' inquiry')}&body=${encodeURIComponent(body)}`;
 };
 
