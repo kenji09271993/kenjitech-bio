@@ -498,7 +498,6 @@ br.sp{display:none}
         <div class="fd"><label class="mono" for="f-mail">Email (required)</label><input id="f-mail" type="email" inputmode="email" autocomplete="email" required><p class="er" id="e-mail"></p></div>
         <div class="fd cx"><label class="mono" for="f-prod">Product / service name (required)</label><input id="f-prod" type="text"><p class="er" id="e-prod"></p></div>
         <div class="fd cx"><label class="mono" for="f-url">Product URL</label><input id="f-url" type="url" inputmode="url"></div>
-        <div class="fd cx"><label class="mono" for="f-target">Where to bring it (e.g. clinics, pharmacies, care homes)</label><input id="f-target" type="text"></div>
         <div class="fd"><label class="mono" for="f-msg">Message</label><textarea id="f-msg" rows="5"></textarea></div>
         <div class="fd"><label class="ck"><input type="checkbox" id="f-consent"><span>I agree to the <a href="#privacy">Privacy Policy</a></span></label><p class="er" id="e-consent"></p></div>
         <button class="btn" type="submit">Compose email</button>
@@ -619,7 +618,7 @@ form.onsubmit=e=>{e.preventDefault();
   const isC=typeVal()==='commercialization',pr=document.getElementById('f-prod').value.trim();document.getElementById('e-prod').textContent=(isC&&!pr)?'Please enter your product or service name.':'';
   if(!n||!okMail(m)||!c||(isC&&!pr))return;
   const t=labels[typeVal()],o=document.getElementById('f-org').value.trim(),msg=document.getElementById('f-msg').value.trim();
-  const cx=isC?`\nProduct: ${pr}\nProduct URL: ${document.getElementById('f-url').value.trim()}\nWhere to bring it: ${document.getElementById('f-target').value.trim()}`:'';
+  const cx=isC?`\nProduct: ${pr}\nProduct URL: ${document.getElementById('f-url').value.trim()}`:'';
   const body=`Inquiry: ${t}\nName: ${n}\nOrganization: ${o}\nEmail: ${m}${cx}\n\n${msg}`;
   location.href=`mailto:${EMAIL}?subject=${encodeURIComponent('[Kenjitech Bio] '+t+' inquiry')}&body=${encodeURIComponent(body)}`;
 };
