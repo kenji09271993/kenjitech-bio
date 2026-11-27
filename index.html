@@ -229,6 +229,14 @@ br.sp{display:none}
   .legend{display:none}
   .answer{padding:28px 20px}
 }
+.tech-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:start}
+.tech video{width:100%;aspect-ratio:16/9;display:block;background:#000;border-radius:4px}
+.tech .body{color:var(--sub);font-size:15px}
+.tech .body+.body{margin-top:14px}
+.tech .note{font-size:12px;color:var(--sub);margin-top:22px;padding-top:14px;border-top:1px solid var(--line)}
+.tech .links{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.tech .links a{color:var(--accent);font-size:15px}
+@media(max-width:860px){.tech-grid{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body class="nojs">
@@ -240,6 +248,7 @@ br.sp{display:none}
     <nav class="main" aria-label="メイン">
       <a href="#vision">Vision</a>
       <a href="#programs">Programs</a>
+      <a href="#technology">YATA</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#founder">Founder</a>
       <a href="#news">News</a>
@@ -253,11 +262,12 @@ br.sp{display:none}
   <a href="#vision"><small>01</small>Vision</a>
   <a href="#questions"><small>02</small>Questions</a>
   <a href="#programs"><small>03</small>Programs</a>
-  <a href="#roadmap"><small>04</small>Roadmap</a>
-  <a href="#founder"><small>05</small>Founder</a>
-  <a href="#engage"><small>06</small>Engage</a>
-  <a href="#news"><small>07</small>News</a>
-  <a href="#contact"><small>08</small>Contact</a>
+  <a href="#technology"><small>04</small>Technology</a>
+  <a href="#roadmap"><small>05</small>Roadmap</a>
+  <a href="#founder"><small>06</small>Founder</a>
+  <a href="#engage"><small>07</small>Engage</a>
+  <a href="#news"><small>08</small>News</a>
+  <a href="#contact"><small>09</small>Contact</a>
   <a href="kenji/"><small>—</small>Private</a>
 </div>
 
@@ -402,10 +412,32 @@ br.sp{display:none}
     </div>
   </section>
 
+  <section id="technology" class="tech">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">04 / Technology</p>
+        <h2>すべての事業を、<br>ひとつの設計基盤で。</h2>
+      </div>
+      <div class="tech-grid reveal">
+        <video controls playsinline preload="metadata" poster="assets/yata-poster.jpg" src="assets/yata-story.mp4" aria-label="自社開発の設計基盤 YATA 誕生の物語（30秒・音声あり）"></video>
+        <div>
+          <p class="mono" style="margin-bottom:12px">YATA — In-house design platform</p>
+          <p class="body">YATA（ヤタ）は、Kenjitech Bio が自社で開発した設計基盤です。設計の力が要ると、創業者は骨折する前から感じていました。その必要を、自分の身体で知ったことから生まれました。</p>
+          <p class="body"><strong style="color:var(--ink)">緊迫した現場でも、直感で、mm単位の設計ができること。</strong>直感的で、シンプルであること。それが設計思想の根幹です。</p>
+          <div class="links">
+            <a href="#contact" data-type="invest">投資について相談する →</a>
+            <a href="#contact" data-type="research">研究・開発で関わる →</a>
+          </div>
+          <p class="note">YATAは研究・開発のための設計基盤であり、医療機器ではありません。診断や治療方針の判断には用いません。映像中の髄内釘は研究用の形状モデルです。音楽：KK「全てを創造する者 Dominus Deus」（DOVA-SYNDROME）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="roadmap">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">04 / Roadmap</p>
+        <p class="mono">05 / Roadmap</p>
         <h2>小さな入口から、<br>生命科学の未来へ。</h2>
       </div>
       <div class="road reveal">
@@ -420,7 +452,7 @@ br.sp{display:none}
 
   <section id="founder" class="dark">
     <div class="wrap">
-      <div class="sec-head reveal"><p class="mono">05 / Founder</p><span></span></div>
+      <div class="sec-head reveal"><p class="mono">06 / Founder</p><span></span></div>
       <div class="founder">
         <div class="reveal">
           <p class="name">永江 賢司</p>
@@ -431,6 +463,7 @@ br.sp{display:none}
           <p class="body">身体が思い通りにならなかった悔しさが、すべての始まりです。理想と現実の差を何度も問い直した先に見えたのは、能力の不足ではなく、転んだときにすぐ立ち上がる自負心を手放していた自分でした。</p>
           <p class="body">だから私は、何度転んでも即座に立ち上がることを、自分と会社の基準にしています。知識も資金も技術も、それを受け止める器がなければ形になりません。その器は、精神力です。</p>
           <p class="body"><strong>世界一の基準を持つ人を迎える器そのものが、世界一の基準を持っていなければ、人はついてこない。</strong>だからこそ、この会社は自らに世界一を課し、その基準で、科学を日常に届けます。出会うすべての人にとって、超幸運な存在であるために。</p>
+          <p style="margin-top:32px"><a href="#technology" style="color:#fff;border-bottom:1px solid #fff;font-size:15px">設計基盤 YATA が生まれた経緯 →</a></p>
           <p style="margin-top:32px"><a href="kenji/" style="color:#fff;border-bottom:1px solid #fff;font-size:15px">永江賢司との対話について →</a></p>
         </div>
       </div>
@@ -440,7 +473,7 @@ br.sp{display:none}
   <section id="engage">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">06 / Engage</p>
+        <p class="mono">07 / Engage</p>
         <h2>この会社に、<br>関わる。</h2>
       </div>
       <div class="eg reveal">
@@ -455,10 +488,11 @@ br.sp{display:none}
   <section id="news">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">07 / News</p>
+        <p class="mono">08 / News</p>
         <h2>お知らせ</h2>
       </div>
       <ul class="news reveal">
+        <li><span class="mono">2026.11</span><span>自社開発の設計基盤「YATA」の映像を公開しました。</span></li>
         <li><span class="mono">2026.11</span><span>医療技術の事業化支援（Medical Commercialization）の受付を開始しました。</span></li>
         <li><span class="mono">2026.11</span><span>Kenjitech Bio の公式サイトを公開しました。</span></li>
       </ul>
@@ -485,7 +519,7 @@ br.sp{display:none}
   <section id="contact">
     <div class="wrap ct">
       <div class="reveal">
-        <p class="mono">08 / Contact</p>
+        <p class="mono">09 / Contact</p>
         <h2>ご相談は、<br>こちらから。</h2>
         <p class="txt">内容を選んで、ご連絡ください。</p>
         <a class="mail" href="mailto:abe9161@gmail.com">abe9161@gmail.com</a>
@@ -515,7 +549,7 @@ br.sp{display:none}
   <section id="company">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">09 / Company</p>
+        <p class="mono">10 / Company</p>
         <h2>会社概要</h2>
       </div>
       <dl class="ov reveal">
