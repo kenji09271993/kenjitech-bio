@@ -237,6 +237,10 @@ br.sp{display:none}
 .tech .links{display:flex;flex-direction:column;gap:10px;margin-top:26px}
 .tech .links a{color:var(--accent);font-size:15px}
 @media(max-width:860px){.tech-grid{grid-template-columns:1fr;gap:28px}}
+.now{display:grid;gap:0;border-top:1px solid var(--line)}.now div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}.now dd b{font-family:"IBM Plex Mono",monospace;font-weight:500;margin-right:12px}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq details:first-child{border-top:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:16px}.faq summary::after{content:"+";color:var(--sub)}.faq details[open] summary::after{content:"−"}.faq summary::-webkit-details-marker{display:none}.faq p{color:var(--sub);margin-top:10px;font-size:15px}
+.warn{margin-top:32px;padding:16px 20px;background:#f6f6f6;font-size:14px;color:var(--sub)}.warn b{color:var(--ink);margin-right:8px}
+@media(max-width:640px){.now div{grid-template-columns:1fr;gap:4px}}
 </style>
 </head>
 <body class="nojs">
@@ -246,10 +250,9 @@ br.sp{display:none}
   <div class="wrap">
     <a href="#top" class="logo" aria-label="Kenjitech Bio トップへ"><b>Kenjitech</b><span> Bio</span></a>
     <nav class="main" aria-label="メイン">
-      <a href="#vision">Vision</a>
       <a href="#programs">Programs</a>
       <a href="#technology">YATA</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#roadmap">Progress</a>
       <a href="#founder">Founder</a>
       <a href="#news">News</a>
       <a href="#contact" class="cta">Contact</a>
@@ -259,14 +262,14 @@ br.sp{display:none}
   </div>
 </header>
 <div class="menu" id="menu">
-  <a href="#vision"><small>01</small>Vision</a>
-  <a href="#questions"><small>02</small>Questions</a>
+  <a href="#engage"><small>01</small>Engage</a>
+  <a href="#vision"><small>02</small>Vision</a>
   <a href="#programs"><small>03</small>Programs</a>
   <a href="#technology"><small>04</small>Technology</a>
-  <a href="#roadmap"><small>05</small>Roadmap</a>
+  <a href="#roadmap"><small>05</small>Progress</a>
   <a href="#founder"><small>06</small>Founder</a>
-  <a href="#engage"><small>07</small>Engage</a>
-  <a href="#news"><small>08</small>News</a>
+  <a href="#news"><small>07</small>News</a>
+  <a href="#faq"><small>08</small>FAQ</a>
   <a href="#contact"><small>09</small>Contact</a>
   <a href="kenji/"><small>—</small>Private</a>
 </div>
@@ -288,17 +291,32 @@ br.sp{display:none}
     </div>
   </div>
 
+  <section id="engage">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">01 / Engage</p>
+        <h2>目的から、<br>選ぶ。</h2>
+      </div>
+      <div class="eg reveal">
+        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">製品を届ける</span><span class="d">ヘルステック企業の方へ。製品を、必要とする現場に届けます。</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">投資について話す</span><span class="d">事業計画と研究の進み具合をご説明します。</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">共同で研究する</span><span class="d">大学・研究機関の方との研究協力を歓迎します。</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">専門家として関わる</span><span class="d">弁理士・弁護士など、専門領域からのご支援を。</span><span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
   <section id="vision">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">01 / Vision</p>
+        <p class="mono">02 / Vision</p>
         <h2>人に深く寄り添う。</h2>
       </div>
       <p class="mission-quote reveal">どれほど優れた技術を<br class="sp">持っていても、<br>極めて身近に存在させなければ、<br>それは<span class="hl">革新</span>とは呼べない。</p>
       <div class="vision-body reveal">
         <p class="mono">Kenjitech Vision</p>
+        <p class="paradox" style="margin:0 0 28px">内には、世界一の基準を。<br>外には、誰でも声をかけられる低いハードルを。</p>
         <p class="vision-text">世界一の基準を持ったコミュニティが、<br>研究、開発、製造、販売、利用に至るまで、<br>会社に関わる全てのプロセスのハードルを、<br class="pc">日常レベルまで下げる。<br>それが人に深く寄り添う機会を最大化し、<br>あなたにとって私たちが<span class="hl">「超幸運」</span>である未来を創り出す。</p>
-        <p class="paradox">内には、世界一の基準を。<br>外には、日常レベルまで下げた、<br class="sp">極めて低いハードルを。</p>
       </div>
       <div class="process reveal">
         <div><p class="mono">Research</p><h3>研究</h3><p>研究者や学生が、気軽に参加できる。</p></div>
@@ -307,24 +325,6 @@ br.sp{display:none}
         <div><p class="mono">Distribution</p><h3>販売</h3><p>優れた医療技術を、現場まで届ける。</p></div>
         <div><p class="mono">Use</p><h3>利用</h3><p>科学で裏付けた価値を、毎日の暮らしで。</p></div>
       </div>
-      <dl class="defs reveal">
-        <div><dt>コミュニティ</dt><dd>社員、研究者、アスリート、顧客、投資家、提携先。Kenjitech Bioに関わる全ての人。</dd></div>
-        <div><dt>超幸運</dt><dd>「出会えたことが最大の幸運だった」と言われる存在であること。</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section id="questions">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="mono">02 / Questions</p>
-        <h2>3つの問いから、<br>始める。</h2>
-      </div>
-      <ol class="qs">
-        <li class="reveal"><span class="qn">Q1</span><p>ヒトは、どこまで自分の身体と能力を、思い通りに扱えるのか。</p></li>
-        <li class="reveal"><span class="qn">Q2</span><p>その限界を、科学でどこまで押し広げられるのか。</p></li>
-        <li class="reveal"><span class="qn">Q3</span><p>その科学を、どうすれば日常の中に届けられるのか。</p></li>
-      </ol>
     </div>
   </section>
 
@@ -437,9 +437,17 @@ br.sp{display:none}
   <section id="roadmap">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">05 / Roadmap</p>
-        <h2>小さな入口から、<br>生命科学の未来へ。</h2>
+        <p class="mono">05 / Progress</p>
+        <h2>現在地と、<br>次の一手。</h2>
       </div>
+      <p class="mono" style="margin-bottom:12px">最終更新 2026.11.28 · 毎月更新</p>
+      <dl class="now reveal">
+        <div><dt class="mono">Done</dt><dd><b>2026.11</b> 医療技術の事業化支援の受付を開始</dd></div>
+        <div><dt class="mono">Done</dt><dd><b>2026.11</b> 設計基盤YATAの試作版が稼働（缶・ボトル・骨接合プレート・髄内釘の4領域）</dd></div>
+        <div><dt class="mono">In progress</dt><dd><b>2027</b> 研究機関との共同研究（99.9）の準備</dd></div>
+        <div><dt class="mono">Next</dt><dd>取引実績・導入件数を、確定したものから順に掲載します。</dd></div>
+      </dl>
+      <p class="mono" style="margin:56px 0 0">Roadmap</p>
       <div class="road reveal">
         <div class="step now"><p class="mono">Phase 1 — 2026</p><h3>医療技術の事業化支援を開始</h3><p>ヘルステック企業と医療現場をつなぐ事業を始動。</p></div>
         <div class="step"><p class="mono">Phase 2 — 2027</p><h3>研究と検証</h3><p>研究機関との共同研究を開始し、99.9の科学的な検証と製品開発を進める。</p></div>
@@ -455,14 +463,15 @@ br.sp{display:none}
       <div class="sec-head reveal"><p class="mono">06 / Founder</p><span></span></div>
       <div class="founder">
         <div class="reveal">
+          <img src="assets/founder.jpg" alt="永江 賢司" width="160" height="160" style="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:20px;display:block">
           <p class="name">永江 賢司</p>
           <p class="mono" style="margin-top:4px">Kenji Nagae — Founder</p>
         </div>
         <div class="reveal">
           <h2>世界一か、<br>それ以外か。</h2>
           <p class="body">身体が思い通りにならなかった悔しさが、すべての始まりです。理想と現実の差を何度も問い直した先に見えたのは、能力の不足ではなく、転んだときにすぐ立ち上がる自負心を手放していた自分でした。</p>
-          <p class="body">だから私は、何度転んでも即座に立ち上がることを、自分と会社の基準にしています。知識も資金も技術も、それを受け止める器がなければ形になりません。その器は、精神力です。</p>
-          <p class="body"><strong>世界一の基準を持つ人を迎える器そのものが、世界一の基準を持っていなければ、人はついてこない。</strong>だからこそ、この会社は自らに世界一を課し、その基準で、科学を日常に届けます。出会うすべての人にとって、超幸運な存在であるために。</p>
+          <p class="body">「世界一か、それ以外か」は、私が自分に課している言葉です。人に押し付けるものではありません。</p>
+          <p class="body"><strong>基準が高いほど、話しやすさが要ると考えています。</strong>失敗も反対意見も、すぐに口に出せる場所でなければ、高い基準には届かないからです。気になることがあれば、肩書きを気にせず声をかけてください。</p>
           <p style="margin-top:32px"><a href="#technology" style="color:#fff;border-bottom:1px solid #fff;font-size:15px">設計基盤 YATA が生まれた経緯 →</a></p>
           <p style="margin-top:32px"><a href="kenji/" style="color:#fff;border-bottom:1px solid #fff;font-size:15px">永江賢司との対話について →</a></p>
         </div>
@@ -470,25 +479,10 @@ br.sp{display:none}
     </div>
   </section>
 
-  <section id="engage">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="mono">07 / Engage</p>
-        <h2>この会社に、<br>関わる。</h2>
-      </div>
-      <div class="eg reveal">
-        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">製品を届ける</span><span class="d">ヘルステック企業の方へ。製品を、必要とする現場に届けます。</span><span class="ar">→</span></a>
-        <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">投資する</span><span class="d">事業計画と研究の進み具合をご説明します。</span><span class="ar">→</span></a>
-        <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">共同で研究する</span><span class="d">大学・研究機関の方との研究協力を歓迎します。</span><span class="ar">→</span></a>
-        <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">専門家として関わる</span><span class="d">弁理士・弁護士など、専門領域からのご支援を。</span><span class="ar">→</span></a>
-      </div>
-    </div>
-  </section>
-
   <section id="news">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">08 / News</p>
+        <p class="mono">07 / News</p>
         <h2>お知らせ</h2>
       </div>
       <ul class="news reveal">
@@ -499,20 +493,18 @@ br.sp{display:none}
     </div>
   </section>
 
-  <section id="support">
+  <section id="faq">
     <div class="wrap">
-      <div class="support reveal">
-        <div>
-          <p class="mono" style="margin-bottom:16px">Support</p>
-          <p class="msg">このサイトを見ているあなたへ。<br>Kenjitech Bio は、ヒトの限界を超える挑戦を続けています。応援したいと思ってくださった方のために、窓口を開いています。金額は自由です。</p>
-        </div>
-        <div>
-          <div class="btns"><a class="btn" href="https://buy.stripe.com/3cI28qeEFeBzbH9fNh7ok00" target="_blank" rel="noopener">応援する</a><a class="btn green" href="https://buy.stripe.com/6oUfZg2VX3WVeTl44z7ok02" target="_blank" rel="noopener">創業を支える</a></div>
-          <p class="small">いただいた応援は、研究と事業のために大切に使います。お名前は、ご希望の方のみ挑戦の記録に刻みます。</p>
-          <p class="small">より深く関わりたい方のために、Founding Patron（1,000万円）の窓口もあります。お名前を記録の最上位に刻みます。出資ではなく、金銭的な見返りはありません。</p>
-          <p class="small">銀行振込でのご支援は、<a href="mailto:abe9161@gmail.com?subject=%E3%80%90Kenjitech%20Bio%E3%80%91%E3%81%94%E6%94%AF%E6%8F%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">メールでご相談ください</a>。</p>
-        </div>
+      <div class="sec-head reveal"><p class="mono">08 / FAQ</p><h2>よくある質問</h2></div>
+      <div class="faq reveal">
+        <details><summary>YATAは医療機器ですか。</summary><p>いいえ。研究・開発のための設計基盤であり、診断や治療方針の判断には用いません。</p></details>
+        <details><summary>YATAを利用・購入できますか。</summary><p>現在は社内の研究・開発に用いています。提携や共同開発のご相談は、お問い合わせからどうぞ。</p></details>
+        <details><summary>医療技術の事業化支援は、どんな企業が対象ですか。</summary><p>医療機関に製品・サービスを届けたいヘルステック企業です。初回のご相談で、対象となる医療機関の条件から一緒に整理します。</p></details>
+        <details><summary>投資のご相談はできますか。</summary><p>事業計画と研究の進み具合を、面談でご説明します。本サイトは有価証券の取得の勧誘を目的とするものではありません。</p></details>
+        <details><summary>研究の結果は公開されますか。</summary><p>知的財産の保護を終えたものから、良し悪しにかかわらず公開します。</p></details>
+        <details><summary>サイトの内容に誤りや異論があります。</summary><p>お問い合わせから、遠慮なくお知らせください。誤りは、訂正した日付と内容を残して直します。</p></details>
       </div>
+      <p class="warn reveal"><b>なりすましにご注意ください。</b>当社からの連絡は abe9161@gmail.com からのみ行います。SNSのダイレクトメッセージで投資や送金をお願いすることはありません。</p>
     </div>
   </section>
 
@@ -520,8 +512,8 @@ br.sp{display:none}
     <div class="wrap ct">
       <div class="reveal">
         <p class="mono">09 / Contact</p>
-        <h2>ご相談は、<br>こちらから。</h2>
-        <p class="txt">内容を選んで、ご連絡ください。</p>
+        <h2>まだ形になっていない話も、<br>どうぞ。</h2>
+        <p class="txt">「こんなことを頼めるか」「この技術を現場に出せるか」といった段階からで構いません。指摘や反対意見も歓迎します。3営業日以内にお返事します。</p>
         <a class="mail" href="mailto:abe9161@gmail.com">abe9161@gmail.com</a>
       </div>
       <form id="cf" class="reveal" novalidate>
@@ -531,6 +523,7 @@ br.sp{display:none}
           <label><input type="radio" name="type" value="invest"><span>投資</span></label>
           <label><input type="radio" name="type" value="research"><span>研究協力</span></label>
           <label><input type="radio" name="type" value="advise"><span>専門家</span></label>
+          <label><input type="radio" name="type" value="other"><span>その他</span></label>
         </fieldset>
         <p class="f-note" id="f-note" aria-live="polite"></p>
         <div class="fd"><label class="mono" for="f-name">お名前（必須）</label><input id="f-name" type="text" autocomplete="name" required><p class="er" id="e-name"></p></div>
@@ -646,7 +639,7 @@ const notes={commercialization:'医療・ヘルスケア領域の製品やサー
 const labels={commercialization:'製品の事業化支援',invest:'投資',research:'研究協力',join:'参画',advise:'専門家として',other:'その他'};
 const form=document.getElementById('cf'),fnote=document.getElementById('f-note');
 const typeVal=()=>form.querySelector('input[name=type]:checked').value;
-const ph={commercialization:'例：製品名、届けたい医療機関の種類（診療科・規模・地域）、希望する開始時期',invest:'例：ご所属、投資の区分（VC・事業会社・個人など）、関心のある事業',research:'例：ご所属、研究分野、関心のある研究テーマ',advise:'例：ご専門の領域、関わり方のご提案'};
+const ph={other:'例：まだ形になっていないアイデア、サイトへのご指摘、ご質問など',commercialization:'例：製品名、届けたい医療機関の種類（診療科・規模・地域）、希望する開始時期',invest:'例：ご所属、投資の区分（VC・事業会社・個人など）、関心のある事業',research:'例：ご所属、研究分野、関心のある研究テーマ',advise:'例：ご専門の領域、関わり方のご提案'};
 const setNote=()=>{document.querySelectorAll('.cx').forEach(el=>el.hidden=typeVal()!=='commercialization');fnote.textContent=notes[typeVal()];document.getElementById('f-msg').placeholder=ph[typeVal()]};
 form.querySelectorAll('input[name=type]').forEach(r=>r.onchange=setNote);setNote();
 document.querySelectorAll('a[data-type]').forEach(a=>a.addEventListener('click',()=>{const r=form.querySelector(`input[value="${a.dataset.type}"]`);if(r){r.checked=true;setNote()}}));

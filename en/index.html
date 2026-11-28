@@ -238,6 +238,10 @@ br.sp{display:none}
 .tech .links{display:flex;flex-direction:column;gap:10px;margin-top:26px}
 .tech .links a{color:var(--accent);font-size:15px}
 @media(max-width:860px){.tech-grid{grid-template-columns:1fr;gap:28px}}
+.now{display:grid;gap:0;border-top:1px solid var(--line)}.now div{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}.now dd b{font-family:"IBM Plex Mono",monospace;font-weight:500;margin-right:12px}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq details:first-child{border-top:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:16px}.faq summary::after{content:"+";color:var(--sub)}.faq details[open] summary::after{content:"−"}.faq summary::-webkit-details-marker{display:none}.faq p{color:var(--sub);margin-top:10px;font-size:15px}
+.warn{margin-top:32px;padding:16px 20px;background:#f6f6f6;font-size:14px;color:var(--sub)}.warn b{color:var(--ink);margin-right:8px}
+@media(max-width:640px){.now div{grid-template-columns:1fr;gap:4px}}
 </style>
 </head>
 <body class="nojs">
@@ -247,10 +251,9 @@ br.sp{display:none}
   <div class="wrap">
     <a href="#top" class="logo" aria-label="Kenjitech Bio home"><b>Kenjitech</b><span> Bio</span></a>
     <nav class="main" aria-label="Main">
-      <a href="#vision">Vision</a>
       <a href="#programs">Programs</a>
       <a href="#technology">YATA</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#roadmap">Progress</a>
       <a href="#founder">Founder</a>
       <a href="#news">News</a>
       <a href="#contact" class="cta">Contact</a>
@@ -260,14 +263,14 @@ br.sp{display:none}
   </div>
 </header>
 <div class="menu" id="menu">
-  <a href="#vision"><small>01</small>Vision</a>
-  <a href="#questions"><small>02</small>Questions</a>
+  <a href="#engage"><small>01</small>Engage</a>
+  <a href="#vision"><small>02</small>Vision</a>
   <a href="#programs"><small>03</small>Programs</a>
   <a href="#technology"><small>04</small>Technology</a>
-  <a href="#roadmap"><small>05</small>Roadmap</a>
+  <a href="#roadmap"><small>05</small>Progress</a>
   <a href="#founder"><small>06</small>Founder</a>
-  <a href="#engage"><small>07</small>Engage</a>
-  <a href="#news"><small>08</small>News</a>
+  <a href="#news"><small>07</small>News</a>
+  <a href="#faq"><small>08</small>FAQ</a>
   <a href="#contact"><small>09</small>Contact</a>
   <a href="../kenji/en/"><small>—</small>Private</a>
 </div>
@@ -289,17 +292,32 @@ br.sp{display:none}
     </div>
   </div>
 
+  <section id="engage">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="mono">01 / Engage</p>
+        <h2>Start with<br>what you need.</h2>
+      </div>
+      <div class="eg reveal">
+        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">Bring your product</span><span class="d">For healthtech companies. We bring your product to the places that need it.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">Talk about investing</span><span class="d">We will walk you through our plans and research progress.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">Research with us</span><span class="d">We welcome collaboration with universities and research institutions.</span><span class="ar">→</span></a>
+        <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">Advise us</span><span class="d">Support from your field — patent attorneys, lawyers and more.</span><span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
   <section id="vision">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">01 / Vision</p>
+        <p class="mono">02 / Vision</p>
         <h2>Stay deeply close to people.</h2>
       </div>
       <p class="mission-quote reveal">No matter how advanced a technology is,<br>unless it lives right beside people,<br>it cannot be called <span class="hl">innovation</span>.</p>
       <div class="vision-body reveal">
         <p class="mono">Kenjitech Vision</p>
+        <p class="paradox" style="margin:0 0 28px">Inside, a number-one standard.<br>Outside, a barrier low enough that anyone can reach out.</p>
         <p class="vision-text">A community held to a number-one standard<br>brings the barrier of every process in this company —<br>research, development, manufacturing, distribution and use —<br>down to the level of everyday life.<br>That maximizes every chance to stay deeply close to people,<br>and creates a future in which we become your <span class="hl">“Super Luck.”</span></p>
-        <p class="paradox">Inside, a number-one standard.<br>Outside, an extremely low barrier, brought down to everyday life.</p>
       </div>
       <div class="process reveal">
         <div><p class="mono">01</p><h3>Research</h3><p>Researchers and students can join with ease.</p></div>
@@ -308,24 +326,6 @@ br.sp{display:none}
         <div><p class="mono">04</p><h3>Distribution</h3><p>Great medical technology, delivered to where care happens.</p></div>
         <div><p class="mono">05</p><h3>Use</h3><p>Science-backed value, in everyday life.</p></div>
       </div>
-      <dl class="defs reveal">
-        <div><dt>Community</dt><dd>Employees, researchers, athletes, customers, investors and partners — everyone involved with Kenjitech Bio.</dd></div>
-        <div><dt>Super Luck</dt><dd>Being the one people describe as “meeting you was the greatest luck of my life.”</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section id="questions">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="mono">02 / Questions</p>
-        <h2>We begin with<br>three questions.</h2>
-      </div>
-      <ol class="qs">
-        <li class="reveal"><span class="qn">Q1</span><p>How far can humans command their own bodies and abilities as they intend?</p></li>
-        <li class="reveal"><span class="qn">Q2</span><p>How far can we push those limits through science?</p></li>
-        <li class="reveal"><span class="qn">Q3</span><p>How can we bring that science into everyday life?</p></li>
-      </ol>
     </div>
   </section>
 
@@ -431,9 +431,17 @@ br.sp{display:none}
   <section id="roadmap">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">05 / Roadmap</p>
-        <h2>From a small entrance<br>to the future of life science.</h2>
+        <p class="mono">05 / Progress</p>
+        <h2>Where we stand,<br>and what comes next.</h2>
       </div>
+      <p class="mono" style="margin-bottom:12px">Last updated 2026.11.28 · Updated monthly</p>
+      <dl class="now reveal">
+        <div><dt class="mono">Done</dt><dd><b>2026.11</b> Opened our medical commercialization service</dd></div>
+        <div><dt class="mono">Done</dt><dd><b>2026.11</b> YATA design platform prototype running (cans, bottles, bone plates, intramedullary nails)</dd></div>
+        <div><dt class="mono">In progress</dt><dd><b>2027</b> Preparing joint research with a research institution (99.9)</dd></div>
+        <div><dt class="mono">Next</dt><dd>We will add customers and deployments as they are confirmed.</dd></div>
+      </dl>
+      <p class="mono" style="margin:56px 0 0">Roadmap</p>
       <div class="road reveal">
         <div class="step now"><p class="mono">Phase 1 — 2026</p><h3>Launch medical commercialization</h3><p>Started a business connecting healthtech companies with medical practice.</p></div>
         <div class="step"><p class="mono">Phase 2 — 2027</p><h3>Research and verification</h3><p>Begin joint research with research institutions, advancing the scientific verification and product development of 99.9.</p></div>
@@ -449,14 +457,15 @@ br.sp{display:none}
       <div class="sec-head reveal"><p class="mono">06 / Founder</p><span></span></div>
       <div class="founder">
         <div class="reveal">
+          <img src="../assets/founder.jpg" alt="Kenji Nagae" width="160" height="160" style="width:160px;height:160px;border-radius:50%;object-fit:cover;margin-bottom:20px;display:block">
           <p class="name">Kenji Nagae</p>
           <p class="mono" style="margin-top:4px">Founder</p>
         </div>
         <div class="reveal">
           <h2>Number one,<br>or nothing.</h2>
           <p class="body">It all began with the frustration of a body that would not move the way I wanted. After asking “why” again and again, what I found was not a lack of ability, but a version of myself that had let go of the pride to get back up the moment I fell.</p>
-          <p class="body">So I made getting back up immediately, no matter how many times I fall, the standard for myself and for this company. Knowledge, capital and technology take no shape without a vessel to hold them. That vessel is strength of mind.</p>
-          <p class="body"><strong>If the vessel that welcomes people of a number-one standard does not hold a number-one standard itself, no one will follow.</strong> That is why this company holds itself to number one, and by that standard brings science into everyday life — to be Super Luck for everyone we meet.</p>
+          <p class="body">“Number one, or nothing” is a standard I hold myself to. It is not one I impose on others.</p>
+          <p class="body"><strong>The higher the standard, the more it matters that people can speak freely.</strong> Unless mistakes and disagreement can be raised right away, no high standard can be reached. If something is on your mind, reach out — titles don’t matter.</p>
           <p style="margin-top:32px"><a href="#technology" style="color:#fff;border-bottom:1px solid #fff;font-size:15px">How YATA was born →</a></p>
           <p style="margin-top:32px"><a href="../kenji/en/" style="color:#fff;border-bottom:1px solid #fff;font-size:15px">A private conversation with Kenji Nagae →</a></p>
         </div>
@@ -464,25 +473,10 @@ br.sp{display:none}
     </div>
   </section>
 
-  <section id="engage">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="mono">07 / Engage</p>
-        <h2>Get involved.</h2>
-      </div>
-      <div class="eg reveal">
-        <a href="#contact" class="pri" data-type="commercialization"><span class="mono">Commission</span><span class="t">Bring your product</span><span class="d">For healthtech companies. We bring your product to the places that need it.</span><span class="ar">→</span></a>
-        <a href="#contact" data-type="invest"><span class="mono">Invest</span><span class="t">Invest</span><span class="d">We will walk you through our plans and research progress.</span><span class="ar">→</span></a>
-        <a href="#contact" data-type="research"><span class="mono">Research</span><span class="t">Research with us</span><span class="d">We welcome collaboration with universities and research institutions.</span><span class="ar">→</span></a>
-        <a href="#contact" data-type="advise"><span class="mono">Advise</span><span class="t">Advise us</span><span class="d">Support from your field — patent attorneys, lawyers and more.</span><span class="ar">→</span></a>
-      </div>
-    </div>
-  </section>
-
   <section id="news">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="mono">08 / News</p>
+        <p class="mono">07 / News</p>
         <h2>News</h2>
       </div>
       <ul class="news reveal">
@@ -493,20 +487,18 @@ br.sp{display:none}
     </div>
   </section>
 
-  <section id="support">
+  <section id="faq">
     <div class="wrap">
-      <div class="support reveal">
-        <div>
-          <p class="mono" style="margin-bottom:16px">Support</p>
-          <p class="msg">To you, reading this site:<br>Kenjitech Bio keeps working to go beyond human limits. For anyone who would like to support us, this door is open. Any amount is welcome.</p>
-        </div>
-        <div>
-          <div class="btns"><a class="btn" href="https://buy.stripe.com/3cI28qeEFeBzbH9fNh7ok00" target="_blank" rel="noopener">Support us</a><a class="btn green" href="https://buy.stripe.com/6oUfZg2VX3WVeTl44z7ok02" target="_blank" rel="noopener">Become a Patron</a></div>
-          <p class="small">Your support goes to our research and business. Names are recorded in our story only if you wish.</p>
-          <p class="small">For those who wish to be more deeply involved, there is also Founding Patron (¥10,000,000). Your name is recorded at the top of our story. It is not an investment and carries no financial return.</p>
-          <p class="small">For support by bank transfer, please <a href="mailto:abe9161@gmail.com?subject=Supporting%20Kenjitech%20Bio">contact us by email</a>.</p>
-        </div>
+      <div class="sec-head reveal"><p class="mono">08 / FAQ</p><h2>FAQ</h2></div>
+      <div class="faq reveal">
+        <details><summary>Is YATA a medical device?</summary><p>No. It is a design platform for research and development, and is not used for diagnosis or treatment decisions.</p></details>
+        <details><summary>Can I use or buy YATA?</summary><p>It is currently used for our own research and development. For partnerships or joint development, please contact us.</p></details>
+        <details><summary>Who is the medical commercialization service for?</summary><p>Healthtech companies that want to bring their products or services to medical institutions. In the first meeting we work out which institutions to target.</p></details>
+        <details><summary>Can I talk to you about investing?</summary><p>We explain our business plan and research progress in a meeting. This website is not a solicitation to acquire securities.</p></details>
+        <details><summary>Will you publish research results?</summary><p>Yes — good or bad — once the related intellectual property is protected.</p></details>
+        <details><summary>I found an error or disagree with something on this site.</summary><p>Please tell us through the contact form. We correct errors and keep a record of the date and content of each correction.</p></details>
       </div>
+      <p class="warn reveal"><b>Beware of impersonation.</b> We only contact you from abe9161@gmail.com. We never ask for investment or money transfers via social media direct messages.</p>
     </div>
   </section>
 
@@ -514,8 +506,8 @@ br.sp{display:none}
     <div class="wrap ct">
       <div class="reveal">
         <p class="mono">09 / Contact</p>
-        <h2>Get in<br>touch.</h2>
-        <p class="txt">Choose a topic and get in touch.</p>
+        <h2>Ideas still taking shape<br>are welcome.</h2>
+        <p class="txt">You can start from “could you help with this?” or “could this technology reach the field?”. Pointed feedback and disagreement are welcome too. We reply within 3 business days.</p>
         <a class="mail" href="mailto:abe9161@gmail.com">abe9161@gmail.com</a>
       </div>
       <form id="cf" class="reveal" novalidate>
@@ -525,6 +517,7 @@ br.sp{display:none}
           <label><input type="radio" name="type" value="invest"><span>Invest</span></label>
           <label><input type="radio" name="type" value="research"><span>Research</span></label>
           <label><input type="radio" name="type" value="advise"><span>Advise</span></label>
+          <label><input type="radio" name="type" value="other"><span>Other</span></label>
         </fieldset>
         <p class="f-note" id="f-note" aria-live="polite"></p>
         <div class="fd"><label class="mono" for="f-name">Name (required)</label><input id="f-name" type="text" autocomplete="name" required><p class="er" id="e-name"></p></div>
@@ -639,7 +632,7 @@ const notes={commercialization:'For companies with a healthcare product or servi
 const labels={commercialization:'Product commercialization',invest:'Investment',research:'Research collaboration',join:'Joining',advise:'Advisory',other:'General'};
 const form=document.getElementById('cf'),fnote=document.getElementById('f-note');
 const typeVal=()=>form.querySelector('input[name=type]:checked').value;
-const ph={commercialization:'e.g. product name, the kinds of clinics you want to reach (specialty, size, region), preferred start',invest:'e.g. affiliation, investor type (VC, corporate, individual), programs of interest',research:'e.g. affiliation, research field, topics of interest',advise:'e.g. area of expertise, how you would like to be involved'};
+const ph={other:'e.g. an early idea, feedback on this site, a question',commercialization:'e.g. product name, the kinds of clinics you want to reach (specialty, size, region), preferred start',invest:'e.g. affiliation, investor type (VC, corporate, individual), programs of interest',research:'e.g. affiliation, research field, topics of interest',advise:'e.g. area of expertise, how you would like to be involved'};
 const setNote=()=>{document.querySelectorAll('.cx').forEach(el=>el.hidden=typeVal()!=='commercialization');fnote.textContent=notes[typeVal()];document.getElementById('f-msg').placeholder=ph[typeVal()]};
 form.querySelectorAll('input[name=type]').forEach(r=>r.onchange=setNote);setNote();
 document.querySelectorAll('a[data-type]').forEach(a=>a.addEventListener('click',()=>{const r=form.querySelector(`input[value="${a.dataset.type}"]`);if(r){r.checked=true;setNote()}}));
